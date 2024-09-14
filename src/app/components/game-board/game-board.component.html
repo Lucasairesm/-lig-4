@@ -1,0 +1,54 @@
+<div class="p-grid p-dir-col p-justify-center p-align-center">
+  <h2 *ngIf="currentPlayer">{{ currentPlayer.name }} Joga ({{ currentPlayer.color }})</h2>
+
+  <div class="board p-grid">
+    <div 
+      class="column-reverse p-col" 
+      *ngFor="let column of columns; let colIndex = index" 
+      (click)="handleColumnClick(colIndex)"
+      [style.background-color]="colIndex % 2 === 0 ? '#add8e6' : '#87CEFA'"
+    >
+      <div 
+        class="cell" 
+        *ngFor="let cell of rows; let rowIndex = index" 
+        [style.background-color]="getCellColor(rowIndex, colIndex)">
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialog de Configuração de Jogadores -->
+  <p-dialog header="Configuração dos Jogadores" [(visible)]="showConfigDialog" modal="true" [closable]="false" [draggable]="false">
+    <div class="p-grid p-dir-col p-justify-center p-align-center">
+      <h2>Configuração dos Jogadores</h2>
+      
+      <div class="p-field p-col-12 p-md-6">
+        <label for="player1-name">Nome do Jogador 1</label>
+        <input pInputText id="player1-name" [(ngModel)]="player1.name" placeholder="Digite o nome do Jogador 1" />
+      </div>
+      
+      <div class="p-field p-col-12 p-md-6">
+        <label for="player1-color">Cor do Jogador 1</label>
+        <p-colorPicker [(ngModel)]="player1.color"></p-colorPicker>
+      </div>
+    
+      <div class="p-field p-col-12 p-md-6">
+        <label for="player2-name">Nome do Jogador 2</label>
+        <input pInputText id="player2-name" [(ngModel)]="player2.name" placeholder="Digite o nome do Jogador 2" />
+      </div>
+      
+      <div class="p-col-12 p-md-6">
+        <label for="player2-color">Cor do Jogador 2</label>
+        <p-colorPicker [(ngModel)]="player2.color"></p-colorPicker>
+      </div>
+    
+      <p-button pButton label="Salvar Configurações" icon="pi pi-check" (click)="saveConfig()"></p-button>
+    </div>
+    
+</p-dialog>
+
+  <!-- Dialog de Vitória/Empate -->
+  <p-dialog header="Resultado Final" [(visible)]="showDialog" modal="true" [closable]="false" [draggable]="false">
+    <p>{{ dialogMessage }}</p>
+    <p-button label="Reiniciar Jogo" icon="pi pi-refresh" (click)="resetGame()"></p-button>
+  </p-dialog>
+</div>

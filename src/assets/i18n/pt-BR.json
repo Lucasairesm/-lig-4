@@ -1,0 +1,21 @@
+{
+    "TITLE": "Tabuleiro do Jogo",
+    "PLAYER_TURN": "É a vez de {{player}}!",
+    "VICTORY": "{{player}} venceu!",
+    "TIE": "O jogo terminou em empate!",
+    "SETTINGS": "Configurações",
+    "SAVE": "Salvar",
+    "PLAYER_1_NAME": "Nome do Jogador 1",
+    "PLAYER_2_NAME": "Nome do Jogador 2",
+    "PLAYER_1_COLOR": "Cor do Jogador 1",
+    "PLAYER_2_COLOR": "Cor do Jogador 2",
+    "COLUMN_FULL": "Essa coluna está cheia!",
+    "RESTART_GAME": "Reiniciar o Jogo",
+    "CONFIG_DIALOG_TITLE": "Configurações dos Jogadores",
+    "RESULT_DIALOG_TITLE": "Resultado Final",
+    "CHOOSE_LANGUAGE": "Escolha o idioma",
+    "LANGUAGE_PT": "Português",
+    "LANGUAGE_EN": "Inglês",
+    "LANGUAGE_ES": "Espanhol"
+  }
+  
