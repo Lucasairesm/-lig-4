@@ -6,7 +6,7 @@ import { Player } from './models/models';
   providedIn: 'root'
 })
 export class GameService {
-  public boardSize = { columns: 7, rows: 6 };  // 7 colunas, 6 linhas
+  public boardSize = { columns: 3, rows: 3 };  // 7 colunas, 6 linhas
   public board: string[][] = [];  // Tabuleiro 2D, cada célula é '' ou cor do jogador
   
   public players: Player[] = [];
@@ -61,7 +61,7 @@ export class GameService {
     let count = 0;
     for (let col = 0; col < this.boardSize.columns; col++) {
       count = this.board[row][col] === color ? count + 1 : 0;
-      if (count === 4) return true; // Encontrou 4 consecutivos
+      if (count === 3) return true; // Encontrou 4 consecutivos
     }
     return false;
   }
@@ -70,7 +70,7 @@ export class GameService {
     let count = 0;
     for (let row = 0; row < this.boardSize.rows; row++) {
       count = this.board[row][col] === color ? count + 1 : 0;
-      if (count === 4) return true; // Encontrou 4 consecutivos
+      if (count === 3) return true; // Encontrou 4 consecutivos
     }
     return false;
   }
@@ -94,7 +94,7 @@ export class GameService {
     // Percorre a diagonal (↘)
     while (r < this.boardSize.rows && c < this.boardSize.columns) {
       count = this.board[r][c] === color ? count + 1 : 0;
-      if (count === 4) return true; // Encontrou 4 consecutivos
+      if (count === 3) return true; // Encontrou 4 consecutivos
       r++; 
       c++;
     }
@@ -114,7 +114,7 @@ export class GameService {
     // Percorre a diagonal (↙)
     while (r < this.boardSize.rows && c >= 0) {
       count = this.board[r][c] === color ? count + 1 : 0;
-      if (count === 4) return true; // Encontrou 4 consecutivos
+      if (count === 3) return true; // Encontrou 4 consecutivos
       r++; 
       c--;
     }

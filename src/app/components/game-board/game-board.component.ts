@@ -25,8 +25,8 @@ import { HttpClient } from '@angular/common/http';
 
 
 export class GameBoardComponent implements OnInit {
-  rows = Array.from({ length: 6 });
-  columns = Array.from({ length: 7 });
+  rows = Array.from({ length: 3 });
+  columns = Array.from({ length: 3 });
   board: string[][] = [];
   currentPlayer!: Player | null;
 
