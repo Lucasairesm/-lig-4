@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificação de Requisitos - Ligue 4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Ligue 4 -Especificação de Requisitos</h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicial</a></li>
+            <li><a href="termo_de_abertura.html">Termo de Abertura</a></li>
+            <li><a href="requisitos.html">Especificação de Requisitos</a></li>
+            <li><a href="regras_do_jogo.html">Regras do Jogo</a></li>
+            <li><a href="lig4.html">Ligue 4</a></li>
+            <li><a href="velha.html">Velha</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <h2>Especificação de Requisitos</h2>
+
+            <h3>REQUISITOS FUNCIONAIS</h3>
+
+            <div class="requirement">
+                <h4>RF-001: Apresentação do Tabuleiro de Jogo</h4>
+                <p><strong>Descrição:</strong> O sistema deve apresentar aos jogadores o tabuleiro, que deve ter 7
+                    colunas com 6 linhas.</p>
+                <p><strong>Prioridade:</strong> Essencial.</p>
+                <p><strong>Associação:</strong> [RF-002] Quantidade de jogadores. [NF-001] A interface deve ser
+                    intuitiva e fácil de usar.</p>
+            </div>
+
+            <div class="requirement">
+                <h4>RF-002: Quantidade de Jogadores</h4>
+                <p><strong>Descrição:</strong> Cada partida deverá ter exatamente 2 jogadores.</p>
+                <p><strong>Prioridade:</strong> Essencial.</p>
+                <p><strong>Associação:</strong> [RF-001] Apresentação do tabuleiro de jogo.</p>
+            </div>
+
+            <div class="requirement">
+                <h4>RF-003: Diferenciação entre os Jogadores</h4>
+                <p><strong>Descrição:</strong> Cada jogador terá uma cor específica para suas peças dentro do jogo.</p>
+                <p><strong>Prioridade:</strong> Essencial.</p>
+                <p><strong>Associação:</strong> [RF-001] Apresentação do tabuleiro de jogo. [RF-002] Quantidade de
+                    jogadores.</p>
+            </div>
+
+            <div class="requirement">
+                <h4>RF-004: Controle de Peças</h4>
+                <p><strong>Descrição:</strong> Cada jogador joga com 21 peças e só terá o controle das peças
+                    pertencentes à cor que escolher.</p>
+                <p><strong>Prioridade:</strong> Essencial.</p>
+                <p><strong>Associação:</strong> [RF-005] Posicionamento das peças. [NF-001] Interface do Usuário.
+                    [NF-003] Tempo de Resposta. [NF-004] Acessibilidade.</p>
+            </div>
+
+            <div class="requirement">
+                <h4>RF-005: Posicionamento das Peças</h4>
+                <p><strong>Descrição:</strong> A vitória da partida visa a que 4 peças sejam ligadas, podendo ser nas
+                    posições horizontal, vertical ou diagonais.</p>
+                <p><strong>Prioridade:</strong> Essencial.</p>
+                <p><strong>Associação:</strong> [RF-001] Apresentação do tabuleiro de jogo. [NF-002] Feedback Visual.
+                    [NF-003] Tempo de Resposta.</p>
+            </div>
+
+            <div class="requirement">
+                <h4>RF-006: Identificador de Vitória</h4>
+                <p><strong>Descrição:</strong> Após o jogador conseguir o ligamento das 4 peças, o sistema identifica e
+                    nomeia o vencedor pela cor das peças.</p>
+                <p><strong>Prioridade:</strong> Essencial.</p>
+                <p><strong>Associação:</strong> [RF-003] Diferenciação entre os jogadores. [NF-002] Feedback Visual.</p>
+            </div>
+
+            <div class="requirement">
+                <h4>RF-007: Fim de Jogo</h4>
+                <p><strong>Descrição:</strong> Ao nomear o vencedor, o sistema deve interromper o jogo e solicitar aos
+                    jogadores uma caixa de confirmação para reinício de outra partida.</p>
+                <p><strong>Prioridade:</strong> Essencial.</p>
+                <p><strong>Associação:</strong> [RF-002] Quantidade de jogadores. [NF-001] A interface deve ser
+                    intuitiva e fácil de usar.</p>
+            </div>
+
+            <div class="requirement">
+                <h4>RF-008: Início e Reinício de Jogo</h4>
+                <p><strong>Descrição:</strong> O sistema deverá sortear o jogador que iniciará ou reiniciará o jogo.</p>
+                <p><strong>Prioridade:</strong> Essencial.</p>
+                <p><strong>Associação:</strong> [RF-002] Quantidade de jogadores. [NF-001] A interface deve ser
+                    intuitiva e fácil de usar.</p>
+            </div>
+
+            <h3>REQUISITOS NÃO-FUNCIONAIS</h3>
+
+            <div class="requirement">
+                <h4>NF-001: Interface do Usuário</h4>
+                <p><strong>Descrição:</strong> A interface deve ser intuitiva e fácil de usar, com instruções claras
+                    para novos jogadores sobre as regras e o funcionamento do jogo.</p>
+                <p><strong>Prioridade:</strong> Importante.</p>
+                <p><strong>Associação:</strong> [RF-001] Apresentação do tabuleiro de jogo. [NF-002] Feedback visual
+                    deve incluir animações e efeitos gráficos, como visualização da vitória.</p>
+            </div>
+
+            <div class="requirement">
+                <h4>NF-002: Feedback Visual</h4>
+                <p><strong>Descrição:</strong> O sistema deve fornecer feedback acessível e eficaz para as ações e
+                    notificações sobre as jogadas, o estado do jogo, vitórias ou empates.</p>
+                <p><strong>Prioridade:</strong> Essencial.</p>
+                <p><strong>Associação:</strong> [RF-006] Identificador de vitória. [RF-007] Fim de jogo. [RF-008]
+                    Reinício do jogo. [NF-009] Empate.</p>
+            </div>
+
+            <div class="requirement">
+                <h4>NF-003: Tempo de Resposta</h4>
+                <p><strong>Descrição:</strong> O sistema deve garantir que as ações dos jogadores sejam processadas e
+                    refletidas na tela em menos de 2 segundos.</p>
+                <p><strong>Prioridade:</strong> Essencial.</p>
+                <p><strong>Associação:</strong> [RF-001] Apresentação do tabuleiro de jogo: o tempo de resposta está
+                    diretamente relacionado à rapidez com que o tabuleiro é exibido para o jogador.</p>
+            </div>
+
+            <div class="requirement">
+                <h4>NF-004: Acessibilidade</h4>
+                <p><strong>Descrição:</strong> O sistema deve permitir a interação com uso do mouse.</p>
+                <p><strong>Prioridade:</strong> Essencial.</p>
+                <p><strong>Associação:</strong> [RF-001] Apresentação do tabuleiro de jogo.</p>
+            </div>
+
+            <div class="requirement">
+                <h4>NF-005: Identificação e Anúncio de Vitória</h4>
+                <p><strong>Descrição:</strong> O sistema deve anunciar a vitória de forma visual, fornecendo informações
+                    claras sobre o vencedor.</p>
+                <p><strong>Prioridade:</strong> Essencial.</p>
+                <p><strong>Associação:</strong> [RF-006] Indicador de vitória.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 - Projeto Ligue 4 Web. Todos os direitos reservados.</p>
+    </div>
+</body>
+
+</html>
