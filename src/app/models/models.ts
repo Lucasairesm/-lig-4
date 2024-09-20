@@ -1,8 +1,7 @@
 export interface Player {
-    name: string;
-    color: string;
-    score: number;
+    nome: string;
+    cor: string;
+    pontos: number;
   }
 
-  
-  
+

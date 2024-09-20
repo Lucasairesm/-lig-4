@@ -1,26 +1,49 @@
-<div class="p-grid p-dir-col p-justify-center p-align-center">
-    <h2>Configuração dos Jogadores</h2>
-    
-    <div class="p-field p-col-12 p-md-6">
-      <label for="player1-name">Nome do Jogador 1</label>
-      <input pInputText id="player1-name" [(ngModel)]="player1.name" placeholder="Digite o nome do Jogador 1" />
+<div class="player-config-container">
+  <p-button icon="pi pi-cog" (click)="openConfigDialog()" [label]="'configPlayers' | translate"></p-button>
+
+  <p-dialog header="{{ 'playerConfig' | translate }}" [(visible)]="displayDialog" [modal]="true" [closable]="false" [draggable]="false" [style]="{width: '50vw'}">
+    <div class="p-fluid">
+      <!-- Configurações do Jogador 1 -->
+      <div class="p-grid p-formgrid p-fluid">
+        <div class="p-field p-col-6">
+          <label for="player1-nome">{{ 'player1Name' | translate }}</label>
+          <input pInputText id="player1-nome" [(ngModel)]="player1.nome" [placeholder]="'enterPlayerName1' | translate"/>
+        </div>
+        <div class="p-field p-col-6">
+          <label for="player1-color">{{ 'player1Color' | translate }}</label>
+          <p-colorPicker [(ngModel)]="player1.cor" format="hex" styleClass="w-full"></p-colorPicker>
+        </div>
+      </div>
+
+      <!-- Configurações do Jogador 2 -->
+      <div class="p-grid p-formgrid p-fluid">
+        <div class="p-field p-col-6">
+          <label for="player2-nome">{{ 'player2Name' | translate }}</label>
+          <input pInputText id="player2-nome" [(ngModel)]="player2.nome" [placeholder]="'enterPlayerName2' | translate"/>
+        </div>
+        <div class="p-field p-col-6">
+          <label for="player2-color">{{ 'player2Color' | translate }}</label>
+          <p-colorPicker [(ngModel)]="player2.cor" format="hex" styleClass="w-full"></p-colorPicker>
+        </div>
+      </div>
+
+      <!-- Dropdown para selecionar o modo de jogo -->
+      <div class="p-field p-col-12">
+        <label for="game-mode">{{ 'gameMode' | translate }}</label>
+        <p-dropdown [options]="gameModes" [(ngModel)]="selectedGameMode" [placeholder]="'selectGameMode' | translate" styleClass="w-full"></p-dropdown>
+      </div>
+
+      <!-- Dropdown para selecionar o idioma -->
+      <div class="p-field p-col-12">
+        <label for="language">{{ 'language' | translate }}</label>
+        <p-dropdown [options]="languages" [(ngModel)]="selectedLanguage" [placeholder]="'selectLanguage' | translate" (onChange)="changeLanguage()" styleClass="w-full"></p-dropdown>
+      </div>
+
+      <!-- Botões -->
+      <div class="p-field p-col-12 p-grid p-justify-end">
+        <p-button label="{{ 'saveConfig' | translate }}" icon="pi pi-check" class="p-button-success p-mr-2" (click)="saveConfig()"></p-button>
+        <p-button label="{{ 'cancel' | translate }}" icon="pi pi-times" class="p-button-secondary" (click)="closeDialog()"></p-button>
+      </div>
     </div>
-    
-    <div class="p-field p-col-12 p-md-6">
-      <label for="player1-color">Cor do Jogador 1</label>
-      <!-- <p-colorPicker [(ngModel)]="player1.color"></p-colorPicker> -->
-    </div>
-  
-    <div class="p-field p-col-12 p-md-6">
-      <label for="player2-name">Nome do Jogador 2</label>
-      <input pInputText id="player2-name" [(ngModel)]="player2.name" placeholder="Digite o nome do Jogador 2" />
-    </div>
-    
-    <div class="p-field p-col-12 p-md-6">
-      <label for="player2-color">Cor do Jogador 2</label>
-      <!-- <p-colorPicker [(ngModel)]="player2.color"></p-colorPicker> -->
-    </div>
-  
-    <p-button pButton label="Salvar Configurações" icon="pi pi-check" (click)="saveConfig()"></p-button>
-  </div>
-  
+  </p-dialog>
+</div>
