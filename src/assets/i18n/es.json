@@ -6,6 +6,5 @@
   "player2Name": "Nombre del Jugador 2",
   "enterPlayerName1": "Ingrese el Nombre del Jugador 1",
   "enterPlayerName2": "Ingrese el Nombre del Jugador 2",
-  "start": "Iniciar Juego",
-  "connect4": "Conecta 4"
+  "start": "Iniciar Juego"
 }

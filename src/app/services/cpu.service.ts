@@ -2,60 +2,46 @@ import { Injectable } from '@angular/core';
 import { GameService } from './game.service';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class CPUService {
+
   constructor(private gameService: GameService) {}
 
   // Função para a CPU fazer um movimento no Connect4
   cpuMoveConnect4(): void {
-    console.log('CPU iniciando a jogada...');
-
     const availableColumns = this.getAvailableColumns();
+
     if (availableColumns.length > 0) {
-      const randomCol =
-        availableColumns[Math.floor(Math.random() * availableColumns.length)];
+      const randomCol = availableColumns[Math.floor(Math.random() * availableColumns.length)];
       const availableRow = this.gameService.getAvailableRow(randomCol);
 
-      console.log(
-        `CPU jogando na coluna: ${randomCol}, linha: ${availableRow}`
-      );
-      this.gameService.board[availableRow][randomCol] =
-        this.gameService.currentPlayer.value!.cor;
+      this.gameService.board[availableRow][randomCol] = this.gameService.currentPlayer.value!.cor;
       this.gameService.addMoveToHistory(availableRow, randomCol);
 
-      // Verifica se a CPU venceu ou empatou
-      if (this.gameService.checkVictory(availableRow, randomCol)) {
-        console.log('CPU venceu!');
-      } else if (this.gameService.checkTie()) {
-        console.log('Empate!');
-      } else {
-        console.log('CPU terminou a jogada.');
+      // A CPU não lida com mensagens, só a lógica de jogo
+      if (!this.gameService.checkVictory(availableRow, randomCol) && !this.gameService.checkTie()) {
+        this.gameService.switchPlayer();  // Continua o jogo
       }
     }
   }
 
+  // Movimentos para TicTacToe
   cpuMoveTicTacToe(): void {
-    console.log('CPU iniciando jogada no Tic-Tac-Toe...');
-
     const availableCells = this.getAvailableCells();
+
     if (availableCells.length > 0) {
       const randomCell = availableCells[Math.floor(Math.random() * availableCells.length)];
       this.gameService.board[randomCell.row][randomCell.col] = this.gameService.currentPlayer.value!.cor;
-
-      console.log(`CPU jogando na célula: ${randomCell.row}, ${randomCell.col}`);
       this.gameService.addMoveToHistory(randomCell.row, randomCell.col);
 
-      if (this.gameService.checkVictory(randomCell.row, randomCell.col)) {
-        console.log('CPU venceu no Tic-Tac-Toe!');
-      } else if (this.gameService.checkTie()) {
-        console.log('Empate no Tic-Tac-Toe!');
+      if (!this.gameService.checkVictory(randomCell.row, randomCell.col) && !this.gameService.checkTie()) {
+        this.gameService.switchPlayer();
       }
     }
   }
 
-
-  // Funções auxiliares de coluna disponíveis
+  // Funções auxiliares de coluna e células disponíveis
   private getAvailableColumns(): number[] {
     const availableColumns: number[] = [];
     for (let col = 0; col < this.gameService.boardSize.columns; col++) {

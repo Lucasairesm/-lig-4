@@ -1,3 +1,9 @@
+  .flag-icon {
+    width: 40px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+
   .game-banner {
     width: 20%;
     cursor: pointer;
@@ -9,4 +15,15 @@
     width: 35%;
     transition: width 0.5s ease, border 0.5s ease, filter 0.5s ease; /* Transição suave */
     opacity: 1;
+  }
+
+
+
+  .p-button-lg {
+    font-size: 1.5rem;
+    padding: 5%;
+  }
+
+  .start-button {
+    margin-top: 20px;
   }

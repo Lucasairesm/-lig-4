@@ -6,7 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { DocumentationViewerComponent } from './components/documentation-viewer/documentation-viewer.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: PlayerConfigComponent },
   { path: 'connect4', component: Connect4Component },
   { path: 'tictactoe', component: JogoDaVelhaComponent },
   { path: 'config', component: PlayerConfigComponent },
