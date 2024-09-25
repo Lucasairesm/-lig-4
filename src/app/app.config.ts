@@ -16,7 +16,6 @@ export const provideTranslation = () => ({
     useFactory: HttpLoaderFactory,
     deps: [HttpClient],
   },
-  defaultLanguage: localStorage.getItem('selectedLanguage') || 'en',
 });
 
 export function HttpLoaderFactory(http: HttpClient) {

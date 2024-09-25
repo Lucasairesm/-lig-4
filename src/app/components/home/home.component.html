@@ -2,19 +2,12 @@
   <!-- Seção de Bem-vindo -->
   <h1>{{ 'welcome' | translate }}</h1>
 
-  <!-- Seção de Idiomas com Bandeiras -->
-  <div class="language-select p-mb-4">
-    <img src="assets/images/br-round.png" (click)="setLanguage('pt-BR')" class="w-1 p-5" alt="Bandeira Brasil" />
-    <img src="assets/images/us-round.png" (click)="setLanguage('en')" class="w-1 p-5" alt="Bandeira Estados Unidos" />
-    <img src="assets/images/es-round.png" (click)="setLanguage('es')" class="w-1 p-5" alt="Bandeira Espanha" />
-  </div>
-
   <!-- Seção de Seleção de Jogo -->
   <div class="grid h-10rem">
     <div class="col-6">
       <img
         src="assets/images/connect4.png"
-        (click)="selectGame('connect4')"
+        (click)="selectGame('connect4'); "
         [ngClass]="{ 'selected-game': selectedGame === 'connect4' }"
         class="game-banner"
         alt="Connect 4"
@@ -23,7 +16,7 @@
     <div class="col-6">
       <img
         src="assets/images/tictactoe.png"
-        (click)="selectGame('tictactoe')"
+        (click)="selectGame('tictactoe'); "
         [ngClass]="{ 'selected-game': selectedGame === 'tictactoe' }"
         class="game-banner"
         alt="Jogo da Velha"
@@ -31,14 +24,14 @@
     </div>
   </div>
 
-  <!-- Seção de Tipo de Jogo (Player vs Player ou Player vs CPU) -->
-  <div class="game-mode p-grid p-justify-center p-mb-4">
-    <p-button label="{{ 'playerVsPlayer' | translate }}" (click)="selectMode('pvp')" [class.p-button-success]="selectedMode === 'pvp'" class="p-button-lg p-button-outlined"></p-button>
-    <p-button label="{{ 'playerVsCpu' | translate }}" (click)="selectMode('cpu')" [class.p-button-success]="selectedMode === 'cpu'" class="p-button-lg p-button-outlined p-ml-2"></p-button>
+  <!-- Seção de Tipo de Jogo -->
+  <div class="game-mode p-grid p-justify-center m-5">
+    <p-button label="{{ 'playerVsPlayer' | translate }}" (click)="selectMode('pvp'); " [class.p-button-success]="selectedMode === 'pvp'" class="p-button-lg p-button-outlined"></p-button>
+    <p-button label="{{ 'playerVsCpu' | translate }}" (click)="selectMode('cpu'); " [class.p-button-success]="selectedMode === 'cpu'" class="p-button-lg p-button-outlined p-ml-2"></p-button>
   </div>
 
   <!-- Inputs de Nomes e ColorPicker dos Jogadores -->
-  <div class="flex align-items-center justify-content-center text-center">
+  <div class="flex align-items-center justify-content-center text-center m-5">
     <div *ngIf="selectedMode === 'pvp'" class="p-grid p-formgrid p-fluid">
       <div>
         <label for="player1-name">{{ 'player1Name' | translate }}</label>
@@ -66,7 +59,12 @@
   </div>
 
   <!-- Botão Start -->
-  <div class="start-button p-mt-4">
-    <p-button label="{{ 'start' | translate }}" (click)="startGame()" class="p-button-lg p-button-success" [disabled]="!canStartGame()"></p-button>
+  <div class="start-button m-5">
+    <p-button
+      label="{{ 'start' | translate }}"
+      (click)="startGame(); "
+      class="p-button-lg"
+      [disabled]="!canStartGame()"
+    ></p-button>
   </div>
 </div>

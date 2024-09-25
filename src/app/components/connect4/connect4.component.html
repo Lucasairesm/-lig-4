@@ -1,13 +1,16 @@
-<div class="p-card p-p-4 p-m-4">
-  <h1 class="p-text-center">{{ 'connect4' | translate }}</h1>
+<div class="flex-column align-content-center justify-content-center">
+  <h1 class="text-center">{{ 'connect4' | translate }}</h1>
+
+
 
   <!-- Nomes dos Jogadores e Placar -->
-  <div class="flex justify-content-between ">
+  <div class="flex justify-content-between mx-7 ">
     <div class="p-card p-5" [style.color]="gameService.players[0]!.cor">
       <h2>{{ gameService.players[0]!.nome }}</h2>
       <p>{{ gameService.players[0]!.pontos }} pts</p>
     </div>
 
+    <h2></h2>
     <div class="p-card p-5" [style.color] [style.color]="gameService.players[1]!.cor">
       <h2>{{ gameService.players[1]!.nome }}</h2>
       <p>{{ gameService.players[1]!.pontos }} pts</p>
@@ -15,7 +18,7 @@
   </div>
 
   <!-- Tabuleiro -->
-  <div class="grid p-justify-center">
+  <div class="grid align-content-center justify-content-center">
     <div
       class="p-col column-reverse"
       *ngFor="let coluna of gameService.getBoard()[0]; let indiceColuna = index"

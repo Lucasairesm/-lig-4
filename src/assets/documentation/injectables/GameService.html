@@ -115,7 +115,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/game.service.ts</code>
+            <code>src/app/services/game.service.ts</code>
         </p>
 
 
@@ -143,7 +143,16 @@
                                 <a href="#boardSize" >boardSize</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#currentPlayer" >currentPlayer</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#moveHistory" >moveHistory</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#objective" >objective</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
@@ -161,6 +170,9 @@
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
+                            <li>
+                                <a href="#addMoveToHistory" >addMoveToHistory</a>
+                            </li>
                             <li>
                                     <span class="modifier">Public</span>
                                 <a href="#checkDiagonal" >checkDiagonal</a>
@@ -188,10 +200,22 @@
                                 <a href="#checkVictory" >checkVictory</a>
                             </li>
                             <li>
+                                <a href="#checkVictoryOrTie" >checkVictoryOrTie</a>
+                            </li>
+                            <li>
+                                <a href="#getAvailableRow" >getAvailableRow</a>
+                            </li>
+                            <li>
                                 <a href="#getBoard" >getBoard</a>
                             </li>
                             <li>
+                                <a href="#resetAll" >resetAll</a>
+                            </li>
+                            <li>
                                 <a href="#resetBoard" >resetBoard</a>
+                            </li>
+                            <li>
+                                <a href="#setGameMode" >setGameMode</a>
                             </li>
                             <li>
                                 <a href="#setPlayers" >setPlayers</a>
@@ -222,7 +246,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/game.service.ts:13</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/services/game.service.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -235,6 +259,85 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addMoveToHistory"></a>
+                    <span class="name">
+                        <span ><b>addMoveToHistory</b></span>
+                        <a href="#addMoveToHistory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addMoveToHistory(row: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, col: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="175"
+                                    class="link-to-prism">src/app/services/game.service.ts:175</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>row</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>col</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -257,8 +360,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="80"
-                                    class="link-to-prism">src/app/game.service.ts:80</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="131"
+                                    class="link-to-prism">src/app/services/game.service.ts:131</a></div>
                         </td>
                     </tr>
 
@@ -350,8 +453,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="84"
-                                    class="link-to-prism">src/app/game.service.ts:84</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="137"
+                                    class="link-to-prism">src/app/services/game.service.ts:137</a></div>
                         </td>
                     </tr>
 
@@ -443,8 +546,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="104"
-                                    class="link-to-prism">src/app/game.service.ts:104</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="156"
+                                    class="link-to-prism">src/app/services/game.service.ts:156</a></div>
                         </td>
                     </tr>
 
@@ -536,8 +639,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="60"
-                                    class="link-to-prism">src/app/game.service.ts:60</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="111"
+                                    class="link-to-prism">src/app/services/game.service.ts:111</a></div>
                         </td>
                     </tr>
 
@@ -615,8 +718,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="55"
-                                    class="link-to-prism">src/app/game.service.ts:55</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="76"
+                                    class="link-to-prism">src/app/services/game.service.ts:76</a></div>
                         </td>
                     </tr>
 
@@ -654,8 +757,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="69"
-                                    class="link-to-prism">src/app/game.service.ts:69</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="121"
+                                    class="link-to-prism">src/app/services/game.service.ts:121</a></div>
                         </td>
                     </tr>
 
@@ -733,8 +836,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="44"
-                                    class="link-to-prism">src/app/game.service.ts:44</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="85"
+                                    class="link-to-prism">src/app/services/game.service.ts:85</a></div>
                         </td>
                     </tr>
 
@@ -796,6 +899,152 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="checkVictoryOrTie"></a>
+                    <span class="name">
+                        <span ><b>checkVictoryOrTie</b></span>
+                        <a href="#checkVictoryOrTie"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>checkVictoryOrTie(row: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, col: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="99"
+                                    class="link-to-prism">src/app/services/game.service.ts:99</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>row</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>col</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAvailableRow"></a>
+                    <span class="name">
+                        <span ><b>getAvailableRow</b></span>
+                        <a href="#getAvailableRow"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAvailableRow(col: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="66"
+                                    class="link-to-prism">src/app/services/game.service.ts:66</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>col</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="getBoard"></a>
                     <span class="name">
                         <span ><b>getBoard</b></span>
@@ -812,8 +1061,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="27"
-                                    class="link-to-prism">src/app/game.service.ts:27</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="46"
+                                    class="link-to-prism">src/app/services/game.service.ts:46</a></div>
                         </td>
                     </tr>
 
@@ -823,6 +1072,43 @@
 
                         <div class="io-description">
                             <b>Returns : </b>    <code>[][]</code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resetAll"></a>
+                    <span class="name">
+                        <span ><b>resetAll</b></span>
+                        <a href="#resetAll"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>resetAll()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="183"
+                                    class="link-to-prism">src/app/services/game.service.ts:183</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                         </div>
                 </td>
@@ -849,8 +1135,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="39"
-                                    class="link-to-prism">src/app/game.service.ts:39</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="59"
+                                    class="link-to-prism">src/app/services/game.service.ts:59</a></div>
                         </td>
                     </tr>
 
@@ -862,6 +1148,73 @@
                             <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                         </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setGameMode"></a>
+                    <span class="name">
+                        <span ><b>setGameMode</b></span>
+                        <a href="#setGameMode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setGameMode(mode: "connect4" | "tictactoe")</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="22"
+                                    class="link-to-prism">src/app/services/game.service.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>mode</td>
+                                            <td>
+                                                        <code>&quot;connect4&quot; | &quot;tictactoe&quot;</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
                 </td>
             </tr>
         </tbody>
@@ -886,8 +1239,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="20"
-                                    class="link-to-prism">src/app/game.service.ts:20</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="35"
+                                    class="link-to-prism">src/app/services/game.service.ts:35</a></div>
                         </td>
                     </tr>
 
@@ -953,8 +1306,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="32"
-                                    class="link-to-prism">src/app/game.service.ts:32</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="51"
+                                    class="link-to-prism">src/app/services/game.service.ts:51</a></div>
                         </td>
                     </tr>
 
@@ -1001,7 +1354,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/game.service.ts:10</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/services/game.service.ts:10</a></div>
                         </td>
                     </tr>
 
@@ -1033,7 +1386,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/game.service.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/services/game.service.ts:9</a></div>
                         </td>
                     </tr>
 
@@ -1046,6 +1399,7 @@
                 <td class="col-md-4">
                     <a name="currentPlayer"></a>
                     <span class="name">
+                            <span class="modifier">Public</span>
                         <span ><b>currentPlayer</b></span>
                         <a href="#currentPlayer"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -1058,7 +1412,71 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/game.service.ts:13</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/services/game.service.ts:12</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="moveHistory"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>moveHistory</b></span>
+                        <a href="#moveHistory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>literal type[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/services/game.service.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="objective"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>objective</b></span>
+                        <a href="#objective"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>4</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/services/game.service.ts:13</a></div>
                         </td>
                     </tr>
 
@@ -1090,7 +1508,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/game.service.ts:12</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/services/game.service.ts:11</a></div>
                         </td>
                     </tr>
 
@@ -1105,127 +1523,194 @@
     <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
 import { BehaviorSubject } from &#x27;rxjs&#x27;;
-import { Player } from &#x27;./models/models&#x27;;
+import { Player } from &#x27;../models/models&#x27;;
 
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
 export class GameService {
-  public boardSize &#x3D; { columns: 7, rows: 6 };  // 7 colunas, 6 linhas
-  public board: string[][] &#x3D; [];  // Tabuleiro 2D, cada célula é &#x27;&#x27; ou cor do jogador
-  
-  public players: Player[] &#x3D; [];
-  currentPlayer &#x3D; new BehaviorSubject&lt;Player | null&gt;(null);
+  public boardSize &#x3D; { columns: 7, rows: 6 };  // Tamanho padrão: 7x6
+  public board: string[][] &#x3D; [];  // Estado do tabuleiro
+  public players: Player[] &#x3D; [];  // Lista de jogadores
+  public currentPlayer &#x3D; new BehaviorSubject&lt;Player | null&gt;(null);  // Jogador atual
+  public objective &#x3D; 4;  // Conectar 4 para vencer
+  public moveHistory: { row: number, col: number, player: Player }[] &#x3D; [];  // Histórico de jogadas
 
   constructor() {
+    this.resetBoard();  // Inicializa o tabuleiro vazio ao criar o serviço
+    console.log(&#x27;Tabuleiro iniciado:&#x27;, this.board);  // Log do estado inicial do tabuleiro
+  }
+
+  // Define o modo de jogo (Connect 4 ou Jogo da Velha)
+  setGameMode(mode: &#x27;connect4&#x27; | &#x27;tictactoe&#x27;): void {
+    console.log(&#x60;Modo de jogo selecionado: ${mode}&#x60;);  // Log de modo de jogo selecionado
+    if (mode &#x3D;&#x3D;&#x3D; &#x27;tictactoe&#x27;) {
+      this.boardSize &#x3D; { columns: 3, rows: 3 };
+      this.objective &#x3D; 3;
+    } else {
+      this.boardSize &#x3D; { columns: 7, rows: 6 };
+      this.objective &#x3D; 4;
+    }
     this.resetBoard();
   }
 
   // Define os jogadores
   setPlayers(players: Player[]): void {
+    if (players[0].cor &#x3D;&#x3D;&#x3D; players[1].cor) {
+      console.error(&#x27;Os jogadores não podem ter a mesma cor!&#x27;);
+      return;
+    }
     this.players &#x3D; players;
-    this.currentPlayer.next(this.players[0]);  // Define o primeiro jogador
-    this.resetBoard();
+    this.currentPlayer.next(this.players[0]);  // Define o jogador 1 como inicial
+    console.log(&#x27;Jogadores definidos:&#x27;, this.players);  // Log dos jogadores definidos
   }
 
-  // Retorna o tabuleiro atual
+  // Retorna o estado atual do tabuleiro
   getBoard(): string[][] {
     return this.board;
   }
 
-  // Alterna para o próximo jogador
+  // Alterna entre os jogadores
   switchPlayer(): void {
     const currentPlayerIndex &#x3D; this.players.findIndex(p &#x3D;&gt; p &#x3D;&#x3D;&#x3D; this.currentPlayer.value);
     const nextPlayer &#x3D; this.players[(currentPlayerIndex + 1) % this.players.length];
     this.currentPlayer.next(nextPlayer);
+    console.log(&#x60;Turno alternado: jogador atual é ${nextPlayer.nome}&#x60;);  // Log alternância de turno
   }
 
-  // Reseta o tabuleiro
+  // Reinicia o tabuleiro
   resetBoard(): void {
     this.board &#x3D; Array.from({ length: this.boardSize.rows }, () &#x3D;&gt; Array(this.boardSize.columns).fill(&#x27;&#x27;));
+    this.moveHistory &#x3D; [];  // Limpa o histórico de jogadas
+    console.log(&#x27;Tabuleiro resetado:&#x27;, this.board);  // Log do reset do tabuleiro
+    this.currentPlayer.next(this.players[0]);
   }
 
-  // Verifica se houve vitória após a última jogada
+  getAvailableRow(col: number): number {
+    for (let row &#x3D; this.boardSize.rows - 1; row &gt;&#x3D; 0; row--) {
+      if (this.board[row][col] &#x3D;&#x3D;&#x3D; &#x27;&#x27;) {
+        return row;
+      }
+    }
+    return -1; // Coluna cheia
+  }
+
+  // Verifica empate
+  checkTie(): boolean {
+    const isTie &#x3D; this.board.every(row &#x3D;&gt; row.every(cell &#x3D;&gt; cell !&#x3D;&#x3D; &#x27;&#x27;));
+    if (isTie) {
+      console.log(&#x27;Partida empatada!&#x27;);  // Log de empate
+    }
+    return isTie;
+  }
+
+  // Verifica se houve vitória
   checkVictory(rowIndex: number, colIndex: number): boolean {
-    const currentColor &#x3D; this.currentPlayer.value?.color;
+    const currentColor &#x3D; this.currentPlayer.value?.cor;
     if (!currentColor) return false;
 
-    // Verificar linha, coluna e diagonais para 4 peças consecutivas
-    return this.checkHorizontal(rowIndex, currentColor) ||
-           this.checkVertical(colIndex, currentColor) ||
-           this.checkDiagonal(rowIndex, colIndex, currentColor);
+    const victory &#x3D; this.checkHorizontal(rowIndex, currentColor) ||
+                    this.checkVertical(colIndex, currentColor) ||
+                    this.checkDiagonal(rowIndex, colIndex, currentColor);
+
+    if (victory) {
+      console.log(&#x60;Jogador ${this.currentPlayer.value?.nome} venceu!&#x60;);  // Log de vitória
+    }
+    return victory;
   }
 
-  // Verifica empate (tabuleiro cheio sem vencedores)
-  checkTie(): boolean {
-    return this.board.every(row &#x3D;&gt; row.every(cell &#x3D;&gt; cell !&#x3D;&#x3D; &#x27;&#x27;));
+  checkVictoryOrTie(row: number, col: number): boolean {
+    if (this.checkVictory(row, col)) {
+      console.log(&#x60;Jogador ${this.currentPlayer.value?.nome} venceu!&#x60;);
+      return true;
+    } else if (this.checkTie()) {
+      console.log(&#x27;Partida empatada!&#x27;);
+      return true;
+    }
+    return false;
   }
 
-  // Verificação Horizontal
+  // Verifica a vitória horizontal
   public checkHorizontal(row: number, color: string): boolean {
     let count &#x3D; 0;
     for (let col &#x3D; 0; col &lt; this.boardSize.columns; col++) {
       count &#x3D; this.board[row][col] &#x3D;&#x3D;&#x3D; color ? count + 1 : 0;
-      if (count &#x3D;&#x3D;&#x3D; 4) return true; // Encontrou 4 consecutivos
+      if (count &#x3D;&#x3D;&#x3D; this.objective) return true;
     }
     return false;
   }
 
+  // Verifica a vitória vertical
   public checkVertical(col: number, color: string): boolean {
     let count &#x3D; 0;
     for (let row &#x3D; 0; row &lt; this.boardSize.rows; row++) {
       count &#x3D; this.board[row][col] &#x3D;&#x3D;&#x3D; color ? count + 1 : 0;
-      if (count &#x3D;&#x3D;&#x3D; 4) return true; // Encontrou 4 consecutivos
+      if (count &#x3D;&#x3D;&#x3D; this.objective) return true;
     }
     return false;
   }
-  
 
-  // Verificação Diagonal (principais e secundárias)
+  // Verifica a vitória diagonal (tanto a principal quanto a secundária)
   public checkDiagonal(row: number, col: number, color: string): boolean {
-    return this.checkDiagonalPrincipal(row, col, color) || this.checkDiagonalSecundaria(row, col, color);
+    return this.checkDiagonalPrincipal(row, col, color) ||
+           this.checkDiagonalSecundaria(row, col, color);
   }
 
+  // Diagonal ↘
   public checkDiagonalPrincipal(row: number, col: number, color: string): boolean {
     let count &#x3D; 0;
     let r &#x3D; row, c &#x3D; col;
-    
-    // Move para o topo da diagonal (esquerda superior ↘)
-    while (r &gt; 0 &amp;&amp; c &gt; 0) { 
-      r--; 
-      c--; 
+
+    // Move para o início da diagonal (↘)
+    while (r &gt; 0 &amp;&amp; c &gt; 0) {
+      r--; c--;
     }
-    
-    // Percorre a diagonal (↘)
+
+    // Verifica a diagonal
     while (r &lt; this.boardSize.rows &amp;&amp; c &lt; this.boardSize.columns) {
       count &#x3D; this.board[r][c] &#x3D;&#x3D;&#x3D; color ? count + 1 : 0;
-      if (count &#x3D;&#x3D;&#x3D; 4) return true; // Encontrou 4 consecutivos
-      r++; 
-      c++;
+      if (count &#x3D;&#x3D;&#x3D; this.objective) return true;
+      r++; c++;
     }
     return false;
   }
-  
+
+  // Diagonal ↙
   public checkDiagonalSecundaria(row: number, col: number, color: string): boolean {
     let count &#x3D; 0;
     let r &#x3D; row, c &#x3D; col;
-  
-    // Move para o topo da diagonal (direita superior ↙)
-    while (r &gt; 0 &amp;&amp; c &lt; this.boardSize.columns - 1) { 
-      r--; 
-      c++; 
+
+    // Move para o início da diagonal (↙)
+    while (r &gt; 0 &amp;&amp; c &lt; this.boardSize.columns - 1) {
+      r--; c++;
     }
-    
-    // Percorre a diagonal (↙)
+
+    // Verifica a diagonal
     while (r &lt; this.boardSize.rows &amp;&amp; c &gt;&#x3D; 0) {
       count &#x3D; this.board[r][c] &#x3D;&#x3D;&#x3D; color ? count + 1 : 0;
-      if (count &#x3D;&#x3D;&#x3D; 4) return true; // Encontrou 4 consecutivos
-      r++; 
-      c--;
+      if (count &#x3D;&#x3D;&#x3D; this.objective) return true;
+      r++; c--;
     }
     return false;
   }
-  
+
+  // Adiciona uma jogada ao histórico
+  addMoveToHistory(row: number, col: number): void {
+    const currentPlayer &#x3D; this.currentPlayer.value;
+    if (currentPlayer) {
+      this.moveHistory.push({ row, col, player: currentPlayer });
+    }
+  }
+
+  // Função para resetar todos os estados
+  resetAll(): void {
+    this.players &#x3D; [];  // Reseta os jogadores
+    this.currentPlayer.next(null);  // Reseta o jogador atual
+    this.board &#x3D; [];  // Reseta o tabuleiro
+    this.moveHistory &#x3D; [];  // Reseta o histórico de movimentos
+    this.objective &#x3D; 4;  // Restaura o objetivo padrão para Connect 4
+    this.boardSize &#x3D; { columns: 7, rows: 6 };  // Restaura o tamanho padrão do tabuleiro para Connect 4
+  }
 }
 </code></pre>
     </div>

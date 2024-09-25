@@ -6,5 +6,8 @@
   "player2Name": "Nome do Jogador 2",
   "enterPlayerName1": "Digite o Nome do Jogador 1",
   "enterPlayerName2": "Digite o Nome do Jogador 2",
-  "start": "Começar Jogo"
+  "start": "Começar Jogo",
+  "won": "venceu",
+  "connect4": "Ligue 4",
+  "playerName": "Jogador 1"
 }

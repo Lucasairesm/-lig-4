@@ -15,10 +15,12 @@ export class GameService {
 
   constructor() {
     this.resetBoard();  // Inicializa o tabuleiro vazio ao criar o serviço
+    console.log('Tabuleiro iniciado:', this.board);  // Log do estado inicial do tabuleiro
   }
 
   // Define o modo de jogo (Connect 4 ou Jogo da Velha)
   setGameMode(mode: 'connect4' | 'tictactoe'): void {
+    console.log(`Modo de jogo selecionado: ${mode}`);  // Log de modo de jogo selecionado
     if (mode === 'tictactoe') {
       this.boardSize = { columns: 3, rows: 3 };
       this.objective = 3;
@@ -29,7 +31,7 @@ export class GameService {
     this.resetBoard();
   }
 
-  // Define os jogadores e garante que as cores sejam diferentes
+  // Define os jogadores
   setPlayers(players: Player[]): void {
     if (players[0].cor === players[1].cor) {
       console.error('Os jogadores não podem ter a mesma cor!');
@@ -37,6 +39,7 @@ export class GameService {
     }
     this.players = players;
     this.currentPlayer.next(this.players[0]);  // Define o jogador 1 como inicial
+    console.log('Jogadores definidos:', this.players);  // Log dos jogadores definidos
   }
 
   // Retorna o estado atual do tabuleiro
@@ -49,12 +52,15 @@ export class GameService {
     const currentPlayerIndex = this.players.findIndex(p => p === this.currentPlayer.value);
     const nextPlayer = this.players[(currentPlayerIndex + 1) % this.players.length];
     this.currentPlayer.next(nextPlayer);
+    console.log(`Turno alternado: jogador atual é ${nextPlayer.nome}`);  // Log alternância de turno
   }
 
   // Reinicia o tabuleiro
   resetBoard(): void {
     this.board = Array.from({ length: this.boardSize.rows }, () => Array(this.boardSize.columns).fill(''));
     this.moveHistory = [];  // Limpa o histórico de jogadas
+    console.log('Tabuleiro resetado:', this.board);  // Log do reset do tabuleiro
+    this.currentPlayer.next(this.players[0]);
   }
 
   getAvailableRow(col: number): number {
@@ -66,20 +72,39 @@ export class GameService {
     return -1; // Coluna cheia
   }
 
-  // Verifica se houve um empate (tabuleiro cheio sem vencedores)
+  // Verifica empate
   checkTie(): boolean {
-    return this.board.every(row => row.every(cell => cell !== ''));
+    const isTie = this.board.every(row => row.every(cell => cell !== ''));
+    if (isTie) {
+      console.log('Partida empatada!');  // Log de empate
+    }
+    return isTie;
   }
 
-  // Verifica se houve vitória com base no último movimento (linha e coluna)
+  // Verifica se houve vitória
   checkVictory(rowIndex: number, colIndex: number): boolean {
     const currentColor = this.currentPlayer.value?.cor;
     if (!currentColor) return false;
 
-    // Verifica horizontal, vertical, diagonal principal e diagonal secundária
-    return this.checkHorizontal(rowIndex, currentColor) ||
-           this.checkVertical(colIndex, currentColor) ||
-           this.checkDiagonal(rowIndex, colIndex, currentColor);
+    const victory = this.checkHorizontal(rowIndex, currentColor) ||
+                    this.checkVertical(colIndex, currentColor) ||
+                    this.checkDiagonal(rowIndex, colIndex, currentColor);
+
+    if (victory) {
+      console.log(`Jogador ${this.currentPlayer.value?.nome} venceu!`);  // Log de vitória
+    }
+    return victory;
+  }
+
+  checkVictoryOrTie(row: number, col: number): boolean {
+    if (this.checkVictory(row, col)) {
+      console.log(`Jogador ${this.currentPlayer.value?.nome} venceu!`);
+      return true;
+    } else if (this.checkTie()) {
+      console.log('Partida empatada!');
+      return true;
+    }
+    return false;
   }
 
   // Verifica a vitória horizontal

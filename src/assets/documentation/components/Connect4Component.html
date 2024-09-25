@@ -390,8 +390,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="49"
-                                    class="link-to-prism">src/app/components/connect4/connect4.component.ts:49</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="50"
+                                    class="link-to-prism">src/app/components/connect4/connect4.component.ts:50</a></div>
                         </td>
                     </tr>
 
@@ -494,8 +494,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="96"
-                                    class="link-to-prism">src/app/components/connect4/connect4.component.ts:96</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="103"
+                                    class="link-to-prism">src/app/components/connect4/connect4.component.ts:103</a></div>
                         </td>
                     </tr>
 
@@ -561,8 +561,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="105"
-                                    class="link-to-prism">src/app/components/connect4/connect4.component.ts:105</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="112"
+                                    class="link-to-prism">src/app/components/connect4/connect4.component.ts:112</a></div>
                         </td>
                     </tr>
 
@@ -598,8 +598,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="110"
-                                    class="link-to-prism">src/app/components/connect4/connect4.component.ts:110</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="119"
+                                    class="link-to-prism">src/app/components/connect4/connect4.component.ts:119</a></div>
                         </td>
                     </tr>
 
@@ -795,69 +795,76 @@ export class Connect4Component implements OnInit {
   ) {}
 
   ngOnInit() {
-    const savedLang &#x3D; localStorage.getItem(&#x27;selectedLanguage&#x27;) || &#x27;en&#x27;;
-    this.translate.use(savedLang);
 
+    // Carrega os parâmetros de jogadores a partir da URL
     this.route.queryParams.subscribe((params) &#x3D;&gt; {
       const player1 &#x3D; params[&#x27;player1&#x27;] || &#x27;Player 1&#x27;;
       const player2 &#x3D; params[&#x27;player2&#x27;] || (params[&#x27;mode&#x27;] &#x3D;&#x3D;&#x3D; &#x27;pvp&#x27; ? &#x27;Player 2&#x27; : &#x27;CPU&#x27;);
       const player1Color &#x3D; params[&#x27;player1Color&#x27;] || &#x27;#ff0000&#x27;;
       const player2Color &#x3D; params[&#x27;player2Color&#x27;] || &#x27;#0000ff&#x27;;
 
+      // Define os jogadores e o modo de jogo
       this.gameService.setPlayers([
         { nome: player1, cor: player1Color, pontos: 0 },
         { nome: player2, cor: player2Color, pontos: 0 }
       ]);
       this.gameService.setGameMode(&#x27;connect4&#x27;);
+      console.log(&#x60;Jogadores: ${player1} (cor: ${player1Color}), ${player2} (cor: ${player2Color})&#x60;);
     });
   }
 
   // Função que lida com o movimento do jogador e da CPU
   manipularCliqueColuna(indiceColuna: number): void {
-    if (this.isCpuTurn) return;  // Bloqueia jogada do humano enquanto CPU joga
+    if (this.isCpuTurn) return;  // Impede o jogador humano de jogar enquanto a CPU está jogando
 
     const linhaDisponivel &#x3D; this.obterLinhaDisponivel(indiceColuna);
-
     if (linhaDisponivel !&#x3D;&#x3D; -1) {
-      const jogadorAtual &#x3D; this.gameService.currentPlayer.value;
+        const jogadorAtual &#x3D; this.gameService.currentPlayer.value;
 
-      if (jogadorAtual) {
-        this.gameService.board[linhaDisponivel][indiceColuna] &#x3D; jogadorAtual.cor;
+        if (jogadorAtual) {
+            // Jogador humano faz seu movimento
+            this.gameService.board[linhaDisponivel][indiceColuna] &#x3D; jogadorAtual.cor;
 
-        // Verificação de vitória ou empate
-        if (this.gameService.checkVictory(linhaDisponivel, indiceColuna)) {
-          this.mensagemDialogo &#x3D; &#x60;${jogadorAtual.nome} ${this.translate.instant(&#x27;won&#x27;)}!&#x60;;
-          this.mostrarDialogo &#x3D; true;
-        } else if (this.gameService.checkTie()) {
-          this.mensagemDialogo &#x3D; this.translate.instant(&#x27;draw&#x27;);
-          this.mostrarDialogo &#x3D; true;
-        } else {
-          this.gameService.switchPlayer();
-
-          const cpuPlayer &#x3D; this.gameService.currentPlayer.value;
-          if (cpuPlayer &amp;&amp; cpuPlayer.nome &#x3D;&#x3D;&#x3D; &#x27;CPU&#x27;) {
-            this.isCpuTurn &#x3D; true;
-            setTimeout(() &#x3D;&gt; {
-              this.cpuService.cpuMoveConnect4();
-
-              // Verifica vitória ou empate do CPU
-              const lastMove &#x3D; this.gameService.moveHistory[this.gameService.moveHistory.length - 1];
-              if (this.gameService.checkVictory(lastMove.row, lastMove.col)) {
-                this.mensagemDialogo &#x3D; &#x60;CPU ${this.translate.instant(&#x27;won&#x27;)}!&#x60;;
+            // Verifica se o jogador humano venceu ou empatou
+            if (this.gameService.checkVictory(linhaDisponivel, indiceColuna)) {
+                this.mensagemDialogo &#x3D; &#x60;${jogadorAtual.nome} ${this.translate.instant(&#x27;won&#x27;)}!&#x60;;
                 this.mostrarDialogo &#x3D; true;
-              } else if (this.gameService.checkTie()) {
+                return;
+            } else if (this.gameService.checkTie()) {
                 this.mensagemDialogo &#x3D; this.translate.instant(&#x27;draw&#x27;);
                 this.mostrarDialogo &#x3D; true;
-              } else {
-                this.gameService.switchPlayer();
-                this.isCpuTurn &#x3D; false;
-              }
-            }, 1000);  // Delay de 1 segundo para a CPU jogar
-          }
+                return;
+            }
+
+            // Alterna o turno entre os jogadores
+            this.gameService.switchPlayer();
+
+            // Verifica se estamos no modo PvP ou Player vs CPU
+            const cpuPlayer &#x3D; this.gameService.currentPlayer.value;
+            if (this.route.snapshot.queryParams[&#x27;mode&#x27;] &#x3D;&#x3D;&#x3D; &#x27;cpu&#x27;) {
+                // Modo Player vs CPU, a CPU faz sua jogada
+                this.isCpuTurn &#x3D; true;
+                setTimeout(() &#x3D;&gt; {
+                    this.cpuService.cpuMoveConnect4();
+
+                    // Verifica se a CPU venceu ou empatou
+                    const lastMove &#x3D; this.gameService.moveHistory[this.gameService.moveHistory.length - 1];
+                    if (this.gameService.checkVictory(lastMove.row, lastMove.col)) {
+                        this.mensagemDialogo &#x3D; &#x60;CPU ${this.translate.instant(&#x27;won&#x27;)}!&#x60;;
+                        this.mostrarDialogo &#x3D; true;
+                    } else if (this.gameService.checkTie()) {
+                        this.mensagemDialogo &#x3D; this.translate.instant(&#x27;draw&#x27;);
+                        this.mostrarDialogo &#x3D; true;
+                    } else {
+                        this.gameService.switchPlayer();  // Volta para o jogador humano
+                        this.isCpuTurn &#x3D; false;  // Libera o jogador humano para jogar
+                    }
+                }, 1000);
+            }
         }
-      }
     }
-  }
+}
+
 
   // Obter linha disponível na coluna clicada
   obterLinhaDisponivel(indiceColuna: number): number {
@@ -870,11 +877,14 @@ export class Connect4Component implements OnInit {
   }
 
   reiniciarJogo(): void {
+    console.log(&#x27;Reiniciando o jogo...&#x27;);
     this.gameService.resetBoard();
     this.mostrarDialogo &#x3D; false;
+    this.isCpuTurn &#x3D; false;
   }
 
   voltarParaHome(): void {
+    console.log(&#x27;Voltando para a tela inicial...&#x27;);
     this.gameService.resetBoard();
     this.mostrarDialogo &#x3D; false;
     this.router.navigate([&#x27;/home&#x27;]);
@@ -884,16 +894,19 @@ export class Connect4Component implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;p-card p-p-4 p-m-4&quot;&gt;
-  &lt;h1 class&#x3D;&quot;p-text-center&quot;&gt;{{ &#x27;connect4&#x27; | translate }}&lt;/h1&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;flex-column align-content-center justify-content-center&quot;&gt;
+  &lt;h1 class&#x3D;&quot;text-center&quot;&gt;{{ &#x27;connect4&#x27; | translate }}&lt;/h1&gt;
+
+
 
   &lt;!-- Nomes dos Jogadores e Placar --&gt;
-  &lt;div class&#x3D;&quot;flex justify-content-between &quot;&gt;
+  &lt;div class&#x3D;&quot;flex justify-content-between mx-7 &quot;&gt;
     &lt;div class&#x3D;&quot;p-card p-5&quot; [style.color]&#x3D;&quot;gameService.players[0]!.cor&quot;&gt;
       &lt;h2&gt;{{ gameService.players[0]!.nome }}&lt;/h2&gt;
       &lt;p&gt;{{ gameService.players[0]!.pontos }} pts&lt;/p&gt;
     &lt;/div&gt;
 
+    &lt;h2&gt;&lt;/h2&gt;
     &lt;div class&#x3D;&quot;p-card p-5&quot; [style.color] [style.color]&#x3D;&quot;gameService.players[1]!.cor&quot;&gt;
       &lt;h2&gt;{{ gameService.players[1]!.nome }}&lt;/h2&gt;
       &lt;p&gt;{{ gameService.players[1]!.pontos }} pts&lt;/p&gt;
@@ -901,7 +914,7 @@ export class Connect4Component implements OnInit {
   &lt;/div&gt;
 
   &lt;!-- Tabuleiro --&gt;
-  &lt;div class&#x3D;&quot;grid p-justify-center&quot;&gt;
+  &lt;div class&#x3D;&quot;grid align-content-center justify-content-center&quot;&gt;
     &lt;div
       class&#x3D;&quot;p-col column-reverse&quot;
       *ngFor&#x3D;&quot;let coluna of gameService.getBoard()[0]; let indiceColuna &#x3D; index&quot;
@@ -984,8 +997,8 @@ export class Connect4Component implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="p-card p-p-4 p-m-4">  <h1 class="p-text-center">{{ \'connect4\' | translate }}</h1>  <!-- Nomes dos Jogadores e Placar -->  <div class="flex justify-content-between ">    <div class="p-card p-5" [style.color]="gameService.players[0]!.cor">      <h2>{{ gameService.players[0]!.nome }}</h2>      <p>{{ gameService.players[0]!.pontos }} pts</p>    </div>    <div class="p-card p-5" [style.color] [style.color]="gameService.players[1]!.cor">      <h2>{{ gameService.players[1]!.nome }}</h2>      <p>{{ gameService.players[1]!.pontos }} pts</p>    </div>  </div>  <!-- Tabuleiro -->  <div class="grid p-justify-center">    <div      class="p-col column-reverse"      *ngFor="let coluna of gameService.getBoard()[0]; let indiceColuna = index"      (click)="manipularCliqueColuna(indiceColuna)"      [style.background-color]="indiceColuna % 2 === 0 ? \'#add8e6\' : \'#87CEFA\'"      style="cursor: pointer; border: 1px solid #00000042; padding: 4px;"    >      <div        class="cell p-mb-2"        *ngFor="let celula of gameService.getBoard(); let indiceLinha = index"        [style.background-color]="gameService.board[indiceLinha][indiceColuna] || \'#FFF\'"        style="width: 60px; height: 60px; border: 2px solid #00000073;"      ></div>    </div>  </div>  <!-- Diálogo de Vitória/Empate -->  <p-dialog [header]="\'result\' | translate" [(visible)]="mostrarDialogo" [modal]="true" [closable]="false" [draggable]="false">    <p>{{ mensagemDialogo }}</p>    <p-button label="{{ \'restart-game\' | translate }}" icon="pi pi-refresh" (click)="reiniciarJogo()"></p-button>    <p-button label="{{ \'end-game\' | translate }}" icon="pi pi-times" (click)="voltarParaHome()"></p-button>  </p-dialog></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Connect4Component', 'selector': 'app-connect4'},{'name': 'GameBoardComponent', 'selector': 'app-game-board'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'JogoDaVelhaComponent', 'selector': 'app-tictactoe'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PlayerConfigComponent', 'selector': 'app-player-config'}];
+        var COMPONENT_TEMPLATE = '<div><div class="flex-column align-content-center justify-content-center">  <h1 class="text-center">{{ \'connect4\' | translate }}</h1>  <!-- Nomes dos Jogadores e Placar -->  <div class="flex justify-content-between mx-7 ">    <div class="p-card p-5" [style.color]="gameService.players[0]!.cor">      <h2>{{ gameService.players[0]!.nome }}</h2>      <p>{{ gameService.players[0]!.pontos }} pts</p>    </div>    <h2></h2>    <div class="p-card p-5" [style.color] [style.color]="gameService.players[1]!.cor">      <h2>{{ gameService.players[1]!.nome }}</h2>      <p>{{ gameService.players[1]!.pontos }} pts</p>    </div>  </div>  <!-- Tabuleiro -->  <div class="grid align-content-center justify-content-center">    <div      class="p-col column-reverse"      *ngFor="let coluna of gameService.getBoard()[0]; let indiceColuna = index"      (click)="manipularCliqueColuna(indiceColuna)"      [style.background-color]="indiceColuna % 2 === 0 ? \'#add8e6\' : \'#87CEFA\'"      style="cursor: pointer; border: 1px solid #00000042; padding: 4px;"    >      <div        class="cell p-mb-2"        *ngFor="let celula of gameService.getBoard(); let indiceLinha = index"        [style.background-color]="gameService.board[indiceLinha][indiceColuna] || \'#FFF\'"        style="width: 60px; height: 60px; border: 2px solid #00000073;"      ></div>    </div>  </div>  <!-- Diálogo de Vitória/Empate -->  <p-dialog [header]="\'result\' | translate" [(visible)]="mostrarDialogo" [modal]="true" [closable]="false" [draggable]="false">    <p>{{ mensagemDialogo }}</p>    <p-button label="{{ \'restart-game\' | translate }}" icon="pi pi-refresh" (click)="reiniciarJogo()"></p-button>    <p-button label="{{ \'end-game\' | translate }}" icon="pi pi-times" (click)="voltarParaHome()"></p-button>  </p-dialog></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Connect4Component', 'selector': 'app-connect4'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'JogoDaVelhaComponent', 'selector': 'app-tictactoe'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PlayerConfigComponent', 'selector': 'app-player-config'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'Connect4Component'};
 </script>

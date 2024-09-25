@@ -60,9 +60,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="components/Connect4Component.html" data-type="entity-link" >Connect4Component</a>
                             </li>
                             <li class="link">
-                                <a href="components/GameBoardComponent.html" data-type="entity-link" >GameBoardComponent</a>
-                            </li>
-                            <li class="link">
                                 <a href="components/HomeComponent.html" data-type="entity-link" >HomeComponent</a>
                             </li>
                             <li class="link">
@@ -73,19 +70,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="components/PlayerConfigComponent.html" data-type="entity-link" >PlayerConfigComponent</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ? 'data-bs-target="#classes-links"' :
-                            'data-bs-target="#xs-classes-links"' }>
-                            <span class="icon ion-ios-paper"></span>
-                            <span>Classes</span>
-                            <span class="icon ion-ios-arrow-down"></span>
-                        </div>
-                        <ul class="links collapse " ${ isNormalMode ? 'id="classes-links"' : 'id="xs-classes-links"' }>
-                            <li class="link">
-                                <a href="classes/AppModule.html" data-type="entity-link" >AppModule</a>
                             </li>
                         </ul>
                     </li>
@@ -102,9 +86,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 </li>
                                 <li class="link">
                                     <a href="injectables/GameService.html" data-type="entity-link" >GameService</a>
-                                </li>
-                                <li class="link">
-                                    <a href="injectables/GameService-1.html" data-type="entity-link" >GameService</a>
                                 </li>
                             </ul>
                         </li>

@@ -235,8 +235,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="12"
-                                    class="link-to-prism">src/app/services/cpu.service.ts:12</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="11"
+                                    class="link-to-prism">src/app/services/cpu.service.ts:11</a></div>
                         </td>
                     </tr>
 
@@ -272,8 +272,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="30"
-                                    class="link-to-prism">src/app/services/cpu.service.ts:30</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="38"
+                                    class="link-to-prism">src/app/services/cpu.service.ts:38</a></div>
                         </td>
                     </tr>
 
@@ -311,8 +311,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="55"
-                                    class="link-to-prism">src/app/services/cpu.service.ts:55</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="69"
+                                    class="link-to-prism">src/app/services/cpu.service.ts:69</a></div>
                         </td>
                     </tr>
 
@@ -350,8 +350,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="45"
-                                    class="link-to-prism">src/app/services/cpu.service.ts:45</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="59"
+                                    class="link-to-prism">src/app/services/cpu.service.ts:59</a></div>
                         </td>
                     </tr>
 
@@ -377,46 +377,60 @@
 import { GameService } from &#x27;./game.service&#x27;;
 
 @Injectable({
-  providedIn: &#x27;root&#x27;
+  providedIn: &#x27;root&#x27;,
 })
 export class CPUService {
-
   constructor(private gameService: GameService) {}
 
   // Função para a CPU fazer um movimento no Connect4
   cpuMoveConnect4(): void {
-    const availableColumns &#x3D; this.getAvailableColumns();
+    console.log(&#x27;CPU iniciando a jogada...&#x27;);
 
+    const availableColumns &#x3D; this.getAvailableColumns();
     if (availableColumns.length &gt; 0) {
-      const randomCol &#x3D; availableColumns[Math.floor(Math.random() * availableColumns.length)];
+      const randomCol &#x3D;
+        availableColumns[Math.floor(Math.random() * availableColumns.length)];
       const availableRow &#x3D; this.gameService.getAvailableRow(randomCol);
 
-      this.gameService.board[availableRow][randomCol] &#x3D; this.gameService.currentPlayer.value!.cor;
+      console.log(
+        &#x60;CPU jogando na coluna: ${randomCol}, linha: ${availableRow}&#x60;
+      );
+      this.gameService.board[availableRow][randomCol] &#x3D;
+        this.gameService.currentPlayer.value!.cor;
       this.gameService.addMoveToHistory(availableRow, randomCol);
 
-      // A CPU não lida com mensagens, só a lógica de jogo
-      if (!this.gameService.checkVictory(availableRow, randomCol) &amp;&amp; !this.gameService.checkTie()) {
-        this.gameService.switchPlayer();  // Continua o jogo
+      // Verifica se a CPU venceu ou empatou
+      if (this.gameService.checkVictory(availableRow, randomCol)) {
+        console.log(&#x27;CPU venceu!&#x27;);
+      } else if (this.gameService.checkTie()) {
+        console.log(&#x27;Empate!&#x27;);
+      } else {
+        console.log(&#x27;CPU terminou a jogada.&#x27;);
       }
     }
   }
 
-  // Movimentos para TicTacToe
   cpuMoveTicTacToe(): void {
-    const availableCells &#x3D; this.getAvailableCells();
+    console.log(&#x27;CPU iniciando jogada no Tic-Tac-Toe...&#x27;);
 
+    const availableCells &#x3D; this.getAvailableCells();
     if (availableCells.length &gt; 0) {
       const randomCell &#x3D; availableCells[Math.floor(Math.random() * availableCells.length)];
       this.gameService.board[randomCell.row][randomCell.col] &#x3D; this.gameService.currentPlayer.value!.cor;
+
+      console.log(&#x60;CPU jogando na célula: ${randomCell.row}, ${randomCell.col}&#x60;);
       this.gameService.addMoveToHistory(randomCell.row, randomCell.col);
 
-      if (!this.gameService.checkVictory(randomCell.row, randomCell.col) &amp;&amp; !this.gameService.checkTie()) {
-        this.gameService.switchPlayer();
+      if (this.gameService.checkVictory(randomCell.row, randomCell.col)) {
+        console.log(&#x27;CPU venceu no Tic-Tac-Toe!&#x27;);
+      } else if (this.gameService.checkTie()) {
+        console.log(&#x27;Empate no Tic-Tac-Toe!&#x27;);
       }
     }
   }
 
-  // Funções auxiliares de coluna e células disponíveis
+
+  // Funções auxiliares de coluna disponíveis
   private getAvailableColumns(): number[] {
     const availableColumns: number[] &#x3D; [];
     for (let col &#x3D; 0; col &lt; this.gameService.boardSize.columns; col++) {
