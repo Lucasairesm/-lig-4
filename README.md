@@ -22,7 +22,7 @@ Ejecuta `ng generate component nombre-componente` para generar un nuevo componen
 
 Execute `ng generate component nome-componente` para gerar um novo componente. Você também pode usar `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build / Construcción / Build
+## Build / Construcción / Construção
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
