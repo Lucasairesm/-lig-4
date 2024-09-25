@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { TranslateModule,TranslateService  } from '@ngx-translate/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GameBoardComponent } from "./components/game-board/game-board.component";
 import { RouterModule } from '@angular/router';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { TabViewModule } from 'primeng/tabview';
+import { HomeComponent } from "./components/home/home.component";
+
 
 @Component({
   selector: 'app-root',
@@ -11,11 +13,26 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.scss'],
   standalone: true,
   imports: [
-    CommonModule, 
-    GameBoardComponent,
+    CommonModule,
     RouterModule,
-  ]
+    HttpClientModule,
+    TranslateModule,
+    TabViewModule,
+    HomeComponent
+]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
+  constructor(
+    private translateService: TranslateService
+  ) {}
+
+  setLanguage(lang: string): void {
+    this.translateService.use(lang);
+  }
+
+  // Recupera o idioma salvo do localStorage
+  ngOnInit(): void {
+    this.translateService.use('pt-BR'); // Padrão inicial
+  }
 }

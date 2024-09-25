@@ -1,0 +1,11 @@
+{
+  "welcome": "Welcome to the Game!",
+  "playerVsPlayer": "Player vs Player",
+  "playerVsCpu": "Player vs CPU",
+  "player1Name": "Player 1 Name",
+  "player2Name": "Player 2 Name",
+  "enterPlayerName1": "Enter Player 1 Name",
+  "enterPlayerName2": "Enter Player 2 Name",
+  "start": "Start Game",
+  "connect4": "Connect 4"
+}
