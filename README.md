@@ -8,11 +8,11 @@ Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli
 
 ## Documentation / Documentación / Documentação
 
-Navigate to `http://localhost:4200/documentation`.
+The project documentation was generated using Compodoc, a powerful tool for creating documentation for Angular projects. You can access it through the CompoDoc menu. In the Properties tab of the CompoDoc menu, the project's Class Diagram is available, providing a visual representation of the relationships between the different components.
 
-Navega a `http://localhost:4200/documentation`.
+La documentación del proyecto fue generada utilizando Compodoc, una herramienta poderosa para crear documentación de proyectos Angular. Puedes acceder a ella a través del menú CompoDoc. En la pestaña Properties del menú CompoDoc, está disponible el Diagrama de Clases del proyecto, proporcionando una representación visual de las relaciones entre los diferentes componentes.
 
-Navegue para `http://localhost:4200/documentation`.
+A documentação do projeto foi gerada utilizando o Compodoc, uma ferramenta poderosa para a criação de documentação de projetos Angular. Você pode acessá-la através do menu CompoDoc. Na guia Properties do menu CompoDoc, o Diagrama de Classes do projeto está disponível, proporcionando uma representação visual das relações entre os diferentes componentes.
 
 ## Development server / Servidor de desarrollo / Servidor de desenvolvimento
 
@@ -61,4 +61,3 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 Para obtener más ayuda sobre Angular CLI, usa `ng help` o visita la página de [Angular CLI Overview and Command Reference](https://angular.io/cli).
 
 Para obter mais ajuda sobre o Angular CLI, use `ng help` ou consulte a página [Angular CLI Overview and Command Reference](https://angular.io/cli).
-
