@@ -76,6 +76,7 @@
           <compodoc-menu></compodoc-menu>
      </div>
 
+
      <div class="container-fluid main">
           <div class="row main">
                <div class="d-none d-md-block menu">
@@ -84,7 +85,6 @@
                <!-- START CONTENT -->
                <div class="content overview">
                     <div class="content-data">
-
 
                          <ol class="breadcrumb">
                               <li class="breadcrumb-item">Overview</li>
@@ -104,7 +104,8 @@
                                         <div class="card text-center">
                                              <div class="card-block">
                                                   <h4 class="card-title"><span
-                                                            class="icon ion-md-arrow-round-down"></span></h4>
+                                                            class="icon ion-md-arrow-round-down"></span>
+                                                  </h4>
                                                   <p class="card-text">2 Injectables</p>
                                              </div>
                                         </div>
@@ -120,13 +121,75 @@
                                    </div>
                               </div>
                          </div>
+
+                         <div class="card">
+                              <div class="card-header">
+                                   <h2>Component Interactions Overview</h2>
+                              </div>
+                              <div class="card-body">
+                                   <p><strong>GameService</strong> centraliza a lógica do jogo, gerenciando o estado do
+                                        tabuleiro,
+                                        o histórico de movimentos, os jogadores, e verificando condições de vitória. Ele
+                                        interage com
+                                        vários componentes como <em>Connect4Component</em> e
+                                        <em>JogoDaVelhaComponent</em>
+                                        para controlar
+                                        o fluxo do jogo e garantir que as regras sejam respeitadas.
+                                   </p>
+
+                                   <p><strong>PlayerConfigComponent</strong> é responsável por configurar os jogadores e
+                                        os
+                                        modos de jogo.
+                                        Ele lida com as opções de idioma e seleciona os modos disponíveis como
+                                        <em>connect4</em> ou <em>tic-tac-toe</em>,
+                                        aplicando as configurações no <em>GameService</em>.
+                                   </p>
+
+                                   <p><strong>Connect4Component</strong> implementa a lógica da interface do usuário
+                                        para o
+                                        jogo Connect 4, manipulando
+                                        o tabuleiro e repassando interações ao <em>GameService</em>. Também controla os
+                                        cliques nas colunas e permite reiniciar o jogo.</p>
+
+                                   <p><strong>JogoDaVelhaComponent</strong> tem um papel similar ao
+                                        <em>Connect4Component</em>, porém adaptado para o jogo da velha.
+                                        Ele interage diretamente com o <em>GameService</em> para processar movimentos e
+                                        gerenciar a lógica de jogo.
+                                   </p>
+
+                                   <p><strong>CPUService</strong> faz as decisões automatizadas para a CPU, determinando
+                                        as
+                                        melhores jogadas para bloquear
+                                        ou vencer. Ele usa a lógica do <em>GameService</em> para simular as jogadas e
+                                        aplicar
+                                        as estratégias do oponente automatizado.</p>
+
+                                   <p><strong>HomeComponent</strong> serve como a página inicial da aplicação,
+                                        permitindo que
+                                        o usuário selecione as opções de jogo
+                                        e então comece uma partida. Ele interage com o <em>GameService</em> para
+                                        repassar as
+                                        escolhas e inicializar o jogo.</p>
+
+                                   <p><strong>AppComponent</strong> gerencia configurações globais como o idioma da
+                                        interface
+                                        e faz a inicialização das configurações
+                                        da aplicação.</p>
+
+                                   <p><strong>NavbarComponent</strong> oferece a navegação entre as diferentes páginas
+                                        da
+                                        aplicação, facilitando o acesso aos componentes principais.</p>
+                              </div>
+                         </div>
+
                          <script src="js/libs/svg-pan-zoom.min.js"></script>
                          <script src="js/svg-pan-zoom.controls.js"></script>
                     </div>
                     <div class="search-results">
                          <div class="has-results">
                               <h1 class="search-results-title"><span class='search-results-count'></span> results
-                                   matching "<span class='search-query'></span>"</h1>
+                                   matching
+                                   "<span class='search-query'></span>"</h1>
                               <ul class="search-results-list"></ul>
                          </div>
                          <div class="no-results">
@@ -138,6 +201,7 @@
                <!-- END CONTENT -->
           </div>
      </div>
+
 
      <label class="dark-mode-switch">
           <input type="checkbox">

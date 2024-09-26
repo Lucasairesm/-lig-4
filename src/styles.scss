@@ -88,10 +88,20 @@
 
 /* Documentação */
 
+div.content h3 {
+  border-top: 1px solid gray;
+  margin: 20px 0px;
+  padding-top: 10px;
+}
+
 div.content h4 {
   // border: 1px solid gray;
   margin: 20px 0px;
   padding: 0px;
+}
+
+div.content h6.details {
+  font-size: 14pt;
 }
 
 div.content div {

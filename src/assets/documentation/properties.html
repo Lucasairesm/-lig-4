@@ -85,50 +85,229 @@
                <div class="content package-properties">
                     <div class="content-data">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                          <ol class="breadcrumb">
                               <li class="breadcrumb-item">Properties</li>
                          </ol>
                          <ul class="properties-list">
                               <li>
-                                   <b>Version</b> : 3.0.0
+                                   <b>Version</b>: 3.0.0
                               </li>
                          </ul>
 
-
                          <img src="src_diagram.png" alt="Diagrama de Classes">
 
+                         <!-- START DETAILED EXPLANATION -->
+                         <div class="details">
+                              <br>
+                              <h3>GameService</h3>
+                              <p>
+                                   <b>Atributos:</b>
+                              <ul>
+                                   <li><b>board:</b> Armazena o estado atual do tabuleiro como uma matriz de strings.
+                                   </li>
+                                   <li><b>boardSize:</b> Contém o número de colunas e linhas do tabuleiro.</li>
+                                   <li><b>currentPlayer:</b> Indica o jogador atual.</li>
+                                   <li><b>moveHistory:</b> Histórico dos movimentos realizados durante o jogo.</li>
+                                   <li><b>objective:</b> Número de peças necessárias para vitória.</li>
+                                   <li><b>players:</b> Lista de jogadores, instanciados através da interface
+                                        <b>Player</b>.
+                                   </li>
+                              </ul>
 
-                    </div>
-                    <div class="search-results">
-                         <div class="has-results">
-                              <h1 class="search-results-title"><span class='search-results-count'></span> results
-                                   matching "<span class='search-query'></span>"</h1>
-                              <ul class="search-results-list"></ul>
-                         </div>
-                         <div class="no-results">
-                              <h1 class="search-results-title">No results matching "<span class='search-query'></span>"
-                              </h1>
+                              <b>Métodos:</b>
+                              <ul>
+                                   <li><b>addMoveToHistory(row, col):</b> Adiciona uma jogada ao histórico.</li>
+                                   <li><b>checkDiagonal():</b> Verifica se há uma sequência diagonal de peças iguais.
+                                   </li>
+                                   <li><b>checkHorizontal(), checkVertical():</b> Verifica se há uma sequência
+                                        horizontal ou
+                                        vertical.</li>
+                                   <li><b>checkVictory():</b> Determina se houve uma vitória após um movimento.</li>
+                                   <li><b>getBoard(), resetBoard():</b> Retorna o tabuleiro atual ou o reseta.</li>
+                                   <li><b>switchPlayer():</b> Alterna entre os jogadores.</li>
+                              </ul>
+                              </p>
+
+                              <h3>Connect4Component</h3>
+                              <p>
+                                   <b>Atributos:</b>
+                              <ul>
+                                   <li><b>isCpuTurn:</b> Indica se é a vez da CPU jogar.</li>
+                                   <li><b>mensagemDialogo:</b> Mensagem exibida em um diálogo modal.</li>
+                              </ul>
+
+                              <b>Métodos:</b>
+                              <ul>
+                                   <li><b>manipularCliqueColuna(indiceColuna):</b> Controla o clique em uma coluna,
+                                        inserindo
+                                        uma peça.</li>
+                                   <li><b>reiniciarJogo(), voltarParaHome():</b> Reinicia o jogo ou retorna para a tela
+                                        inicial.</li>
+                              </ul>
+
+                              <b>Relacionamento:</b> Utiliza o <b>GameService</b> para acessar as funcionalidades de
+                              jogo e o
+                              serviço de tradução.
+                              </p>
+
+                              <h3>PlayerConfigComponent</h3>
+                              <p>
+                                   <b>Atributos:</b>
+                              <ul>
+                                   <li><b>displayDialog:</b> Define se a janela de configuração de jogador está visível.
+                                   </li>
+                                   <li><b>gameModes:</b> Lista de modos de jogo disponíveis.</li>
+                                   <li><b>player1, player2:</b> Referências aos jogadores configurados.</li>
+                              </ul>
+
+                              <b>Métodos:</b>
+                              <ul>
+                                   <li><b>openConfigDialog(), closeDialog():</b> Abre ou fecha o diálogo de
+                                        configuração.
+                                   </li>
+                                   <li><b>saveConfig():</b> Salva as configurações do jogador.</li>
+                              </ul>
+
+                              <b>Relacionamento:</b> Usa o <b>GameService</b> para configurar os jogadores.
+                              </p>
+
+                              <h3>JogoDaVelhaComponent</h3>
+                              <p>
+                                   <b>Atributos:</b>
+                              <ul>
+                                   <li><b>isCpuTurn:</b> Indica se é a vez da CPU no jogo da velha.</li>
+                                   <li><b>mensagemDialogo:</b> Mensagem para diálogos de interação com o usuário.</li>
+                              </ul>
+
+                              <b>Métodos:</b>
+                              <ul>
+                                   <li><b>manipularCliqueCelula(indiceCelula):</b> Controla os cliques em uma célula do
+                                        tabuleiro do jogo da velha.</li>
+                                   <li><b>reiniciarJogo(), voltarParaHome():</b> Reinicia o jogo ou volta para a página
+                                        principal.</li>
+                              </ul>
+
+                              <b>Relacionamento:</b> Utiliza o <b>GameService</b> e o <b>CPUService</b> para lógica de
+                              jogo e
+                              movimentos automáticos da CPU.
+                              </p>
+
+                              <h3>CPUService</h3>
+                              <p>
+                                   <b>Atributos:</b>
+                              <ul>
+                                   <li>Nenhum atributo específico.</li>
+                              </ul>
+
+                              <b>Métodos:</b>
+                              <ul>
+                                   <li><b>findBlockingMove():</b> Busca movimentos que podem bloquear a vitória do
+                                        jogador
+                                        adversário.</li>
+                                   <li><b>findWinningMove():</b> Busca movimentos vencedores para a CPU.</li>
+                                   <li><b>makeRandomMove():</b> Realiza um movimento aleatório quando não há uma jogada
+                                        óbvia.</li>
+                              </ul>
+
+                              <b>Relacionamento:</b> Está relacionado a componentes de jogos como
+                              <b>Connect4Component</b> e
+                              <b>JogoDaVelhaComponent</b> para executar ações controladas pela CPU.
+                              </p>
+
+                              <h3>HomeComponent</h3>
+                              <p>
+                                   <b>Atributos:</b>
+                              <ul>
+                                   <li><b>player1Name, player2Name:</b> Armazena os nomes dos jogadores no jogo da velha
+                                        ou
+                                        Conecta 4.</li>
+                                   <li><b>selectedMode:</b> Define o modo de jogo selecionado, entre "conecta4" ou "tic
+                                        tac
+                                        toe".</li>
+                              </ul>
+
+                              <b>Métodos:</b>
+                              <ul>
+                                   <li><b>selectGame(mode):</b> Seleciona o modo de jogo desejado.</li>
+                                   <li><b>startGame():</b> Inicia o jogo baseado na seleção de modo.</li>
+                              </ul>
+
+                              <b>Relacionamento:</b> Interage com <b>PlayerConfigComponent</b> para configurar os
+                              jogadores e
+                              iniciar o jogo.
+                              </p>
+
+                              <h3>NavbarComponent</h3>
+                              <p>
+                                   Componente simples que representa a barra de navegação, sem atributos ou métodos
+                                   específicos detalhados no diagrama.
+                              </p>
+
+                              <h3>AppComponent</h3>
+                              <p>
+                                   <b>Atributos:</b>
+                              <ul>
+                                   <li><b>idiomaSelecionado:</b> Indica o idioma atual selecionado pelo usuário.</li>
+                              </ul>
+
+                              <b>Métodos:</b>
+                              <ul>
+                                   <li><b>setLanguage(lang):</b> Define o idioma para a aplicação.</li>
+                              </ul>
+
+                              <b>Relacionamento:</b> Trabalha com o serviço de tradução para garantir que os textos da
+                              aplicação sejam exibidos no idioma correto.
+                              </p>
+
+                              <h3>HttpLoaderFactory</h3>
+                              <p>
+                                   Responsável por fornecer as configurações para carregamento de arquivos HTTP, usado
+                                   principalmente no serviço de tradução.
+                              </p>
+
+                              <h3>TranslateService</h3>
+                              <p>
+                                   <b>Atributos:</b>
+                              <ul>
+                                   <li><b>currentLang:</b> Armazena o idioma atual da aplicação.</li>
+                              </ul>
+
+                              <b>Métodos:</b>
+                              <ul>
+                                   <li><b>getTranslation(lang):</b> Recupera a tradução para o idioma especificado.</li>
+                                   <li><b>use(lang):</b> Define o idioma usado na aplicação.</li>
+                              </ul>
+
+                              <b>Relacionamento:</b> Utilizado por componentes como <b>AppComponent</b> e
+                              <b>NavbarComponent</b> para gerenciar a exibição de conteúdos traduzidos.
+                              </p>
+
+                              <h3>GameInterface</h3>
+                              <p>
+                                   Define a interface que o <b>GameService</b> deve implementar para garantir a
+                                   estrutura do
+                                   jogo. Relacionado diretamente com os serviços de lógica de jogo.
+                              </p>
+
+                              <h3>Player</h3>
+                              <p>
+                                   Representa os jogadores dentro da aplicação. Pode ser humano ou CPU.
+                              </p>
+
+                              <h3>BoardComponent</h3>
+                              <p>
+                                   Responsável por renderizar o estado atual do tabuleiro. Faz uso dos dados fornecidos
+                                   pelo
+                                   <b>GameService</b> para apresentar o jogo visualmente.
+                              </p>
+
                          </div>
                     </div>
                </div>
                <!-- END CONTENT -->
           </div>
      </div>
+
 
      <label class="dark-mode-switch">
           <input type="checkbox">
