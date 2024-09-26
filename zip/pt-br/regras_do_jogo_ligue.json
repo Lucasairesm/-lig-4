@@ -1,0 +1,34 @@
+{
+    "TITLE": "Manual do Jogador - Ligue 4",
+    "HEADER": {
+      "TITLE": "Ligue 4 - Manual do Jogador"
+    },
+    "NAV": {
+      "HOME": "Inicial",
+      "PROJECT_CHARTER": "Termo de Abertura",
+      "REQUIREMENTS": "Especificação de Requisitos",
+      "GAME_RULES": "Regras do Jogo",
+      "CONNECT_4": "Ligue 4",
+      "TIC_TAC_TOE": "Velha"
+    },
+    "CONTENT": {
+      "TITLE": "Ligue 4",
+      "OBJECTIVE_TITLE": "Objetivo",
+      "OBJECTIVE_DESCRIPTION": "O primeiro jogador que conseguir alinhar quatro peças consecutivas (na horizontal, vertical ou diagonal) vence a partida.",
+      "BOARD_TITLE": "Tabuleiro",
+      "BOARD_DESCRIPTION": "O tabuleiro é uma grade vertical de 7 colunas por 6 linhas. Ele é posicionado de modo que as peças sejam inseridas pelo topo das colunas e caiam para a linha mais baixa disponível nesta coluna.",
+      "PIECES_TITLE": "Peças",
+      "PIECES_DESCRIPTION": "Cada jogador possui um conjunto de peças de cor distinta (geralmente vermelho e amarelo).",
+      "RULES_TITLE": "Regras",
+      "RULE_1": "Os jogadores se alternam com um movimento de cada jogador, inserindo uma peça de sua cor em qualquer uma das colunas do tabuleiro.",
+      "RULE_2": "A peça cai na posição mais baixa disponível da coluna e cada peça seguinte vai preenchendo os espaços vazios ou ficando sobre a peça abaixo.",
+      "RULE_3": "O jogo continua até que um dos jogadores consiga alinhar quatro peças consecutivas, ou até que o tabuleiro fique completamente cheio, resultando em um empate.",
+      "END_GAME_TITLE": "Fim de Jogo",
+      "END_GAME_DESCRIPTION": "O jogo acaba após um dos jogadores conseguir alinhar as 4 peças, dessa forma é declarado o vencedor por meio da cor escolhida pelo jogador. No fim, o jogador deve clicar no botão para encerrar a partida e iniciar um novo jogo.",
+      "DRAW_DESCRIPTION": "Em caso de empate, os jogadores terão a escolha de reiniciar a partida ou sair do jogo."
+    },
+    "FOOTER": {
+      "TEXT": "Projeto HEIL Web. Todos os direitos reservados."
+    }
+  }
+  

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ 'TITLE' | translate }}</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>{{ 'HEADER.TITLE' | translate }}</h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">{{ 'NAV.HOME' | translate }}</a></li>
+            <li><a href="termo_de_abertura.html">{{ 'NAV.PROJECT_CHARTER' | translate }}</a></li>
+            <li><a href="requisitos.html">{{ 'NAV.REQUIREMENTS' | translate }}</a></li>
+            <li><a href="regras_do_jogo.html">{{ 'NAV.GAME_RULES' | translate }}</a></li>
+            <li><a href="lig4.html">{{ 'NAV.CONNECT_4' | translate }}</a></li>
+            <li><a href="velha.html">{{ 'NAV.TIC_TAC_TOE' | translate }}</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <h1>{{ 'CONTENT.GAME_TITLE' | translate }}</h1>
+            
+            <h2>{{ 'CONTENT.OBJECTIVE_TITLE' | translate }}</h2>
+            <p>{{ 'CONTENT.OBJECTIVE_DESCRIPTION' | translate }}</p>
+
+            <h2>{{ 'CONTENT.BOARD_TITLE' | translate }}</h2>
+            <p>{{ 'CONTENT.BOARD_DESCRIPTION' | translate }}</p>
+
+            <h2>{{ 'CONTENT.PIECES_TITLE' | translate }}</h2>
+            <p>{{ 'CONTENT.PIECES_DESCRIPTION' | translate }}</p>
+
+            <h2>{{ 'CONTENT.RULES_TITLE' | translate }}</h2>
+            <ul>
+                <li>{{ 'CONTENT.RULES_ITEM_1' | translate }}</li>
+                <li>{{ 'CONTENT.RULES_ITEM_2' | translate }}</li>
+                <li>{{ 'CONTENT.RULES_ITEM_3' | translate }}</li>
+            </ul>
+
+            <h2>{{ 'CONTENT.END_GAME_TITLE' | translate }}</h2>
+            <p>{{ 'CONTENT.END_GAME_DESCRIPTION' | translate }}</p>
+            <p>{{ 'CONTENT.END_GAME_DRAW_DESCRIPTION' | translate }}</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 - {{ 'FOOTER.TEXT' | translate }}</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+{
+    "TITLE": "Juego de Tres en Raya - Prototipo del Juego",
+    "HEADER": {
+      "TITLE": "Juego de Tres en Raya - Prototipo del Juego"
+    },
+    "NAV": {
+      "HOME": "Inicio",
+      "PROJECT_CHARTER": "Acta de Apertura",
+      "REQUIREMENTS": "Especificación de Requisitos",
+      "GAME_RULES": "Reglas del Juego",
+      "CONNECT_4": "Conecta 4",
+      "TIC_TAC_TOE": "Tres en Raya"
+    },
+    "CONTENT": {
+      "TIC_TAC_TOE_PROTOTYPE": "Prototipo del Juego de Tres en Raya"
+    },
+    "BUTTONS": {
+      "RESTART_TIC_TAC_TOE": "Reiniciar Juego de Tres en Raya"
+    },
+    "FOOTER": {
+      "TEXT": "Proyecto HEIL Web. Todos los derechos reservados."
+    }
+  }
+  

@@ -1,0 +1,112 @@
+{
+    "TITLE": "Especificación de Requisitos - Conecta 4",
+    "HEADER": {
+      "TITLE": "Conecta 4 - Especificación de Requisitos"
+    },
+    "NAV": {
+      "HOME": "Inicio",
+      "PROJECT_CHARTER": "Acta de Apertura",
+      "REQUIREMENTS": "Especificación de Requisitos",
+      "GAME_RULES": "Reglas del Juego",
+      "CONNECT_4": "Conecta 4",
+      "TIC_TAC_TOE": "Tres en Raya"
+    },
+    "CONTENT": {
+      "REQUIREMENTS_SPECIFICATION_TITLE": "Especificación de Requisitos Conecta 4",
+      "FUNCTIONAL_REQUIREMENTS": "REQUISITOS FUNCIONALES",
+      "DESCRIPTION": "Descripción:",
+      "PRIORITY": "Prioridad:",
+      "ASSOCIATION": "Asociación:",
+      "ESSENTIAL": "Esencial",
+      "IMPORTANT": "Importante",
+      "FUNCTIONAL_REQUIREMENTS": {
+        "RF001": {
+          "TITLE": "RF-001: Presentación del Tablero de Juego",
+          "DESCRIPTION": "El sistema debe mostrar el tablero a los jugadores, que debe tener 7 columnas y 6 filas.",
+          "ASSOCIATION": "[RF-002] Cantidad de jugadores. [NF-001] La interfaz debe ser intuitiva y fácil de usar."
+        },
+        "RF002": {
+          "TITLE": "RF-002: Cantidad de Jugadores",
+          "DESCRIPTION": "Cada partida debe tener exactamente 2 jugadores.",
+          "ASSOCIATION": "[RF-001] Presentación del tablero de juego."
+        },
+        "RF003": {
+          "TITLE": "RF-003: Diferenciación entre los Jugadores",
+          "DESCRIPTION": "Cada jugador tendrá un color específico para sus piezas en el juego.",
+          "ASSOCIATION": "[RF-001] Presentación del tablero de juego. [RF-002] Cantidad de jugadores."
+        },
+        "RF004": {
+          "TITLE": "RF-004: Control de Piezas",
+          "DESCRIPTION": "Cada jugador juega con 21 piezas y solo tendrá control sobre las piezas de su color elegido.",
+          "ASSOCIATION": "[RF-005] Posicionamiento de las piezas. [NF-001] Interfaz de Usuario. [NF-003] Tiempo de Respuesta. [NF-004] Accesibilidad."
+        },
+        "RF005": {
+          "TITLE": "RF-005: Posicionamiento de las Piezas",
+          "DESCRIPTION": "El objetivo del juego es conectar 4 piezas, ya sea en posiciones horizontales, verticales o diagonales.",
+          "ASSOCIATION": "[RF-001] Presentación del tablero de juego. [NF-002] Retroalimentación visual. [NF-003] Tiempo de Respuesta."
+        },
+        "RF006": {
+          "TITLE": "RF-006: Identificador de Victoria",
+          "DESCRIPTION": "Después de que un jugador conecte 4 piezas, el sistema identificará y declarará al ganador por el color de las piezas.",
+          "ASSOCIATION": "[RF-003] Diferenciación entre los jugadores. [NF-002] Retroalimentación Visual."
+        },
+        "RF007": {
+          "TITLE": "RF-007: Fin del Juego",
+          "DESCRIPTION": "Al declarar al ganador, el sistema debe detener el juego y mostrar una caja de confirmación para que los jugadores puedan reiniciar otra partida.",
+          "ASSOCIATION": "[RF-002] Cantidad de jugadores. [NF-001] La interfaz debe ser intuitiva y fácil de usar."
+        },
+        "RF008": {
+          "TITLE": "RF-008: Inicio y Reinicio del Juego",
+          "DESCRIPTION": "El sistema debe sortear qué jugador comenzará o reiniciará el juego.",
+          "ASSOCIATION": "[RF-002] Cantidad de jugadores. [NF-001] La interfaz debe ser intuitiva y fácil de usar."
+        },
+        "RF009": {
+          "TITLE": "RF-009: 5 opciones de colores/figuras",
+          "DESCRIPTION": "El sistema deberá ofrecer una selección de 5 colores/figuras para que el jugador elija para sus piezas.",
+          "ASSOCIATION": "[RF-002] Cantidad de jugadores. [NF-001] La interfaz debe ser intuitiva y fácil de usar."
+        },
+        "RF010": {
+          "TITLE": "RF-010: Opción de 3 Idiomas",
+          "DESCRIPTION": "El sistema debe permitir al jugador seleccionar hasta 3 idiomas.",
+          "ASSOCIATION": "[RF-002] Cantidad de jugadores. [NF-001] La interfaz debe ser intuitiva y fácil de usar."
+        },
+        "RF011": {
+          "TITLE": "RF-011: Interacción Jugador vs. Computadora",
+          "DESCRIPTION": "El sistema debe tener la opción de que el jugador también pueda jugar contra la máquina.",
+          "ASSOCIATION": "[RF-002] Cantidad de jugadores. [NF-001] La interfaz debe ser intuitiva y fácil de usar."
+        }
+      },
+      "NON_FUNCTIONAL_REQUIREMENTS": "REQUISITOS NO FUNCIONALES",
+      "NON_FUNCTIONAL_REQUIREMENTS": {
+        "NF001": {
+          "TITLE": "NF-001: Interfaz de Usuario",
+          "DESCRIPTION": "La interfaz debe ser intuitiva y fácil de usar, con instrucciones claras para los nuevos jugadores sobre las reglas y el funcionamiento del juego.",
+          "ASSOCIATION": "[RF-001] Presentación del tablero de juego. [NF-002] La retroalimentación visual debe incluir animaciones y efectos gráficos, como visualización de la victoria."
+        },
+        "NF002": {
+          "TITLE": "NF-002: Retroalimentación Visual",
+          "DESCRIPTION": "El sistema debe proporcionar retroalimentación accesible y efectiva para las acciones y notificaciones sobre las jugadas, el estado del juego, victorias o empates.",
+          "ASSOCIATION": "[RF-006] Identificador de victoria. [RF-007] Fin del juego. [RF-008] Reinicio del juego. [NF-009] Empate."
+        },
+        "NF003": {
+          "TITLE": "NF-003: Tiempo de Respuesta",
+          "DESCRIPTION": "El sistema debe garantizar que las acciones de los jugadores se procesen y se reflejen en la pantalla en menos de 2 segundos.",
+          "ASSOCIATION": "[RF-001] Presentación del tablero de juego: el tiempo de respuesta está directamente relacionado con la rapidez con la que se muestra el tablero al jugador."
+        },
+        "NF004": {
+          "TITLE": "NF-004: Accesibilidad",
+          "DESCRIPTION": "El sistema debe permitir la interacción con el uso del mouse.",
+          "ASSOCIATION": "[RF-001] Presentación del tablero de juego."
+        },
+        "NF005": {
+          "TITLE": "NF-005: Identificación y Anuncio de Victoria",
+          "DESCRIPTION": "El sistema debe anunciar la victoria de forma visual, proporcionando información clara sobre el ganador.",
+          "ASSOCIATION": "[RF-006] Identificador de victoria."
+        }
+      }
+    },
+    "FOOTER": {
+      "TEXT": "Proyecto HEIL Games Web. Todos los derechos reservados."
+    }
+  }
+  

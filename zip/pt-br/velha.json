@@ -1,0 +1,24 @@
+{
+    "TITLE": "Jogo da Velha - Protótipo do Jogo",
+    "HEADER": {
+      "TITLE": "Jogo da Velha - Protótipo do Jogo"
+    },
+    "NAV": {
+      "HOME": "Inicial",
+      "PROJECT_CHARTER": "Termo de Abertura",
+      "REQUIREMENTS": "Especificação de Requisitos",
+      "GAME_RULES": "Regras do Jogo",
+      "CONNECT_4": "Ligue 4",
+      "TIC_TAC_TOE": "Velha"
+    },
+    "CONTENT": {
+      "TIC_TAC_TOE_PROTOTYPE_TITLE": "Protótipo do Jogo da Velha"
+    },
+    "BUTTONS": {
+      "RESTART_TIC_TAC_TOE": "Reiniciar Jogo da Velha"
+    },
+    "FOOTER": {
+      "TEXT": "Projeto HEIL Web. Todos os direitos reservados."
+    }
+  }
+  

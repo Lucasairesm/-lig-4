@@ -1,0 +1,34 @@
+{
+    "TITLE": "Manual del Jugador - Conecta 4",
+    "HEADER": {
+      "TITLE": "Conecta 4 - Manual del Jugador"
+    },
+    "NAV": {
+      "HOME": "Inicio",
+      "PROJECT_CHARTER": "Acta de Apertura",
+      "REQUIREMENTS": "Especificación de Requisitos",
+      "GAME_RULES": "Reglas del Juego",
+      "CONNECT_4": "Conecta 4",
+      "TIC_TAC_TOE": "Tres en Raya"
+    },
+    "CONTENT": {
+      "GAME_TITLE": "Conecta 4",
+      "OBJECTIVE_TITLE": "Objetivo",
+      "OBJECTIVE_DESCRIPTION": "El primer jugador que logre alinear cuatro piezas consecutivas (horizontalmente, verticalmente o en diagonal) gana la partida.",
+      "BOARD_TITLE": "Tablero",
+      "BOARD_DESCRIPTION": "El tablero es una cuadrícula vertical de 7 columnas por 6 filas. Está posicionado de modo que las piezas se insertan desde la parte superior de las columnas y caen a la fila más baja disponible en esa columna.",
+      "PIECES_TITLE": "Piezas",
+      "PIECES_DESCRIPTION": "Cada jugador tiene un conjunto de piezas de color distinto (generalmente rojo y amarillo).",
+      "RULES_TITLE": "Reglas",
+      "RULES_ITEM_1": "Los jugadores se turnan, con cada jugador insertando una pieza de su color en cualquier columna del tablero.",
+      "RULES_ITEM_2": "La pieza cae a la posición más baja disponible en la columna, con cada pieza siguiente llenando los espacios vacíos o quedando sobre la pieza de abajo.",
+      "RULES_ITEM_3": "El juego continúa hasta que uno de los jugadores alinea cuatro piezas consecutivas, o hasta que el tablero esté completamente lleno, resultando en un empate.",
+      "END_GAME_TITLE": "Fin del Juego",
+      "END_GAME_DESCRIPTION": "El juego termina cuando uno de los jugadores logra alinear las 4 piezas, declarando al ganador según el color elegido por el jugador. Al final, el jugador debe hacer clic en el botón para finalizar la partida e iniciar un nuevo juego.",
+      "END_GAME_DRAW_DESCRIPTION": "En caso de empate, los jugadores tendrán la opción de reiniciar la partida o salir del juego."
+    },
+    "FOOTER": {
+      "TEXT": "Proyecto HEIL Web. Todos los derechos reservados."
+    }
+  }
+  

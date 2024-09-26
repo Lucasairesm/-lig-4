@@ -1,0 +1,32 @@
+{
+    "TITLE": "Especificação de Requisitos - Ligue 4",
+    "HEADER": {
+      "TITLE": "Ligue 4 - Especificação de Requisitos"
+    },
+    "NAV": {
+      "HOME": "Inicial",
+      "PROJECT_CHARTER": "Termo de Abertura",
+      "REQUIREMENTS": "Especificação de Requisitos",
+      "GAME_RULES": "Regras do Jogo",
+      "CONNECT_4": "Ligue 4",
+      "TIC_TAC_TOE": "Velha"
+    },
+    "CONTENT": {
+      "REQUIREMENTS_SPEC_TITLE": "Especificação de Requisitos Ligue 4",
+      "FUNCTIONAL_REQUIREMENTS_TITLE": "REQUISITOS FUNCIONAIS",
+      "RF_001_TITLE": "RF-001: Apresentação do Tabuleiro de Jogo",
+      "RF_001_DESCRIPTION": "O sistema deve apresentar aos jogadores o tabuleiro, que deve ter 7 colunas com 6 linhas.",
+      "RF_002_TITLE": "RF-002: Quantidade de Jogadores",
+      "RF_002_DESCRIPTION": "Cada partida deverá ter exatamente 2 jogadores.",
+      "DESCRIPTION": "Descrição",
+      "PRIORITY": "Prioridade",
+      "ESSENTIAL": "Essencial",
+      "ASSOCIATION": "Associação",
+      "ASSOCIATION_RF_001": "[RF-002] Quantidade de jogadores. [NF-001] A interface deve ser intuitiva e fácil de usar.",
+      "ASSOCIATION_RF_002": "[RF-001] Apresentação do tabuleiro de jogo.",
+      "FOOTER": {
+        "TEXT": "Projeto HEIL Games Web. Todos os direitos reservados."
+      }
+    }
+  }
+  

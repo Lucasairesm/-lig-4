@@ -1,19 +1,16 @@
 <div class="flex-column align-content-center justify-content-center">
   <h1 class="text-center">{{ 'connect4' | translate }}</h1>
 
-
-
   <!-- Nomes dos Jogadores e Placar -->
   <div class="flex justify-content-between mx-7 ">
     <div class="p-card p-5" [style.color]="gameService.players[0]!.cor">
       <h2>{{ gameService.players[0]!.nome }}</h2>
-      <p>{{ gameService.players[0]!.pontos }} pts</p>
+      <p>{{ gameService.players[0]!.pontos }} {{ 'points' | translate }}</p>
     </div>
 
-    <h2></h2>
-    <div class="p-card p-5" [style.color] [style.color]="gameService.players[1]!.cor">
+    <div class="p-card p-5" [style.color]="gameService.players[1]!.cor">
       <h2>{{ gameService.players[1]!.nome }}</h2>
-      <p>{{ gameService.players[1]!.pontos }} pts</p>
+      <p>{{ gameService.players[1]!.pontos }} {{ 'points' | translate }}</p>
     </div>
   </div>
 

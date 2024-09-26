@@ -7,12 +7,12 @@
   <div class="p-grid p-justify-between p-align-center score-section p-mb-4">
     <div class="player1 p-col-4" [style.color]="gameService.players[0]!.cor">
       <h2>{{ gameService.players[0]!.nome }}</h2>
-      <p>{{ gameService.players[0]!.pontos }} pts</p>
+      <p>{{ gameService.players[0]!.pontos }} {{ 'points' | translate }}</p>
     </div>
 
     <div class="player2 p-col-4 text-right" [style.color]="gameService.players[1]!.cor">
       <h2>{{ gameService.players[1]!.nome }}</h2>
-      <p>{{ gameService.players[1]!.pontos }} pts</p>
+      <p>{{ gameService.players[1]!.pontos }} {{ 'points' | translate }}</p>
     </div>
   </div>
 
@@ -26,7 +26,6 @@
         [style.background-color]="gameService.board[rowIndex][colIndex] || '#FFF'"
         style="width: 80px; height: 80px; border: 2px solid #000; cursor: pointer;"
       >
-        <!-- Conteúdo da Célula -->
       </div>
     </div>
   </div>

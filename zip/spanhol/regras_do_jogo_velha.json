@@ -1,0 +1,33 @@
+{
+    "TITLE": "Manual del Jugador - Tres en Raya",
+    "HEADER": {
+      "TITLE": "Tres en Raya - Manual del Jugador"
+    },
+    "NAV": {
+      "HOME": "Inicio",
+      "PROJECT_CHARTER": "Acta de Apertura",
+      "REQUIREMENTS": "Especificación de Requisitos",
+      "GAME_RULES": "Reglas del Juego",
+      "CONNECT_4": "Conecta 4",
+      "TIC_TAC_TOE": "Tres en Raya"
+    },
+    "CONTENT": {
+      "GAME_TITLE": "Tres en Raya",
+      "OBJECTIVE_TITLE": "Objetivo",
+      "OBJECTIVE_DESCRIPTION": "El primer jugador que logre alinear 3 piezas consecutivas (horizontalmente, verticalmente o en diagonal) gana la partida.",
+      "BOARD_TITLE": "Tablero",
+      "BOARD_DESCRIPTION": "El tablero es una cuadrícula vertical de 3 columnas por 3 filas.",
+      "PIECES_TITLE": "Piezas",
+      "PIECES_DESCRIPTION": "Cada jugador tiene una pieza de color y figura distinta.",
+      "RULES_TITLE": "Reglas",
+      "RULES_ITEM_1": "Los jugadores se turnan, con cada jugador llenando un espacio vacío con su pieza de color en cualquier espacio del tablero.",
+      "RULES_ITEM_2": "El juego continúa hasta que uno de los jugadores alinee 3 piezas consecutivas, o hasta que el tablero esté completamente lleno, resultando en un empate.",
+      "END_GAME_TITLE": "Fin del Juego",
+      "END_GAME_DESCRIPTION": "El juego termina cuando uno de los jugadores logra alinear las 3 piezas, declarando al ganador según el color elegido por el jugador. Al final, el jugador debe hacer clic en el botón para finalizar la partida e iniciar un nuevo juego.",
+      "END_GAME_DRAW_DESCRIPTION": "En caso de empate, los jugadores tendrán la opción de reiniciar la partida o salir del juego."
+    },
+    "FOOTER": {
+      "TEXT": "Proyecto HEIL Web. Todos los derechos reservados."
+    }
+  }
+  

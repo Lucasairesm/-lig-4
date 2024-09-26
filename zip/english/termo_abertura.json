@@ -1,0 +1,47 @@
+{
+    "TITLE": "Project Charter - HEIL GAMES Web",
+    "HEADER": {
+      "TITLE": "HEIL Games - Project Charter"
+    },
+    "NAV": {
+      "HOME": "Home",
+      "PROJECT_CHARTER": "Project Charter",
+      "REQUIREMENTS": "Requirements Specification",
+      "GAME_RULES": "Game Rules",
+      "CONNECT_4": "Connect 4",
+      "TIC_TAC_TOE": "Tic-Tac-Toe"
+    },
+    "CONTENT": {
+      "PROJECT_TITLE": "Project: HEIL Games 4 Development for Web",
+      "SPONSOR": "Sponsor:",
+      "PROJECT_MANAGER": "Project Manager:",
+      "SELF_MANAGED_TEAM": "Self-managed team",
+      "DATE": "Date:",
+      "OVERVIEW_TITLE": "Project Overview",
+      "OVERVIEW_DESCRIPTION": "The project for developing the Connect 4 game for the web aims to create an online version of the classic board game, allowing players to compete against each other in a digital environment.",
+      "OBJECTIVES_TITLE": "Project Objectives",
+      "OBJECTIVE_1": "Develop an online version of the Connect 4 game to run on web browsers.",
+      "OBJECTIVE_2": "Allow human players to compete in real-time.",
+      "OBJECTIVE_3": "Ensure an intuitive and responsive interface for a pleasant gaming experience.",
+      "SCOPE_TITLE": "Project Scope",
+      "SCOPE_DESCRIPTION": "The project scope includes:",
+      "SCOPE_ITEM_1": "Development of the necessary front-end and back-end for the game's functionality.",
+      "SCOPE_ITEM_2": "Implementation of a player match management system.",
+      "SCOPE_ITEM_3": "Testing and validation of the system to ensure the game's stability and usability.",
+      "BUDGET_TITLE": "Estimated Budget",
+      "BUDGET_AMOUNT": "The total estimated budget for the project is R$ 100,000.00.",
+      "TIMELINE_TITLE": "Estimated Timeline",
+      "TIMELINE_DESCRIPTION": "The project will have an estimated duration of 8 hours, with the following key phases:",
+      "TIMELINE_PLANNING": "Planning Phase: 1 hour",
+      "TIMELINE_DEVELOPMENT": "Development Phase: 3 hours",
+      "TIMELINE_TESTING": "Testing Phase: 1 hour",
+      "TIMELINE_DEPLOYMENT": "Deployment Phase: 1 hour",
+      "TIMELINE_FINAL_PRESENTATION": "Final Presentation Phase: 5 min",
+      "APPROVAL_TITLE": "Project Charter Approval",
+      "APPROVAL_DESCRIPTION": "With the signature below, the Sponsor formally approves the start of the project as described in this document."
+    },
+    "FOOTER": {
+      "TEXT": "Connect 4 Web Project. All rights reserved."
+    }
+  }
+  

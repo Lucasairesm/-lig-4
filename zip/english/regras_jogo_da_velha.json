@@ -1,0 +1,33 @@
+{
+    "TITLE": "Player Manual - Tic-Tac-Toe",
+    "HEADER": {
+      "TITLE": "Tic-Tac-Toe - Player Manual"
+    },
+    "NAV": {
+      "HOME": "Home",
+      "PROJECT_CHARTER": "Project Charter",
+      "REQUIREMENTS": "Requirements Specification",
+      "GAME_RULES": "Game Rules",
+      "CONNECT_4": "Connect 4",
+      "TIC_TAC_TOE": "Tic-Tac-Toe"
+    },
+    "CONTENT": {
+      "GAME_TITLE": "Tic-Tac-Toe",
+      "OBJECTIVE_TITLE": "Objective",
+      "OBJECTIVE_DESCRIPTION": "The first player to align 3 consecutive pieces (horizontally, vertically, or diagonally) wins the game.",
+      "BOARD_TITLE": "Board",
+      "BOARD_DESCRIPTION": "The board is a vertical grid of 3 columns by 3 rows.",
+      "PIECES_TITLE": "Pieces",
+      "PIECES_DESCRIPTION": "Each player has a piece of a distinct color and figure.",
+      "RULES_TITLE": "Rules",
+      "RULES_ITEM_1": "Players take turns, with each player filling an empty space with their colored piece in any space on the board.",
+      "RULES_ITEM_2": "The game continues until one player aligns 3 consecutive pieces, or until the board is completely filled, resulting in a draw.",
+      "END_GAME_TITLE": "End of Game",
+      "END_GAME_DESCRIPTION": "The game ends when one player successfully aligns 3 pieces, and the winner is declared based on the color chosen by the player. At the end, the player must click the button to end the game and start a new one.",
+      "END_GAME_DRAW_DESCRIPTION": "In the event of a draw, players will have the option to restart the game or exit."
+    },
+    "FOOTER": {
+      "TEXT": "HEIL Web Project. All rights reserved."
+    }
+  }
+  

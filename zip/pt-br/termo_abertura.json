@@ -1,0 +1,47 @@
+{
+    "TITLE": "Termo de Abertura do Projeto - HEIL GAMES Web",
+    "HEADER": {
+      "TITLE": "HEIL Games - Termo de Abertura do Projeto"
+    },
+    "NAV": {
+      "HOME": "Inicial",
+      "PROJECT_CHARTER": "Termo de Abertura",
+      "REQUIREMENTS": "Especificação de Requisitos",
+      "GAME_RULES": "Regras do Jogo",
+      "CONNECT_4": "Ligue 4",
+      "TIC_TAC_TOE": "Velha"
+    },
+    "CONTENT": {
+      "PROJECT_TITLE": "Projeto: Desenvolvimento do HEIL Games 4 para Web",
+      "SPONSOR": "Patrocinador:",
+      "PROJECT_MANAGER": "Gerente do Projeto:",
+      "SELF_MANAGED_TEAM": "Equipe autogerenciável",
+      "DATE": "Data:",
+      "PROJECT_OVERVIEW_TITLE": "Visão Geral do Projeto",
+      "PROJECT_OVERVIEW_DESCRIPTION": "O projeto de desenvolvimento do jogo Ligue 4 para web visa criar uma versão online do clássico jogo de tabuleiro, permitindo que jogadores disputem partidas entre si em um ambiente digital.",
+      "PROJECT_OBJECTIVES_TITLE": "Objetivos do Projeto",
+      "OBJECTIVE_1": "Desenvolver uma versão online do jogo Ligue 4 para rodar em navegadores web.",
+      "OBJECTIVE_2": "Permitir que jogadores humanos possam competir entre si em tempo real.",
+      "OBJECTIVE_3": "Garantir uma interface intuitiva e responsiva para uma experiência de jogo agradável.",
+      "PROJECT_SCOPE_TITLE": "Escopo do Projeto",
+      "PROJECT_SCOPE_DESCRIPTION": "O escopo do projeto inclui:",
+      "SCOPE_ITEM_1": "Desenvolvimento do front-end e back-end necessários para o funcionamento do jogo.",
+      "SCOPE_ITEM_2": "Implementação de um sistema de gerenciamento de partidas entre jogadores.",
+      "SCOPE_ITEM_3": "Testes e validação do sistema para garantir a estabilidade e usabilidade do jogo.",
+      "ESTIMATED_BUDGET_TITLE": "Orçamento Estimado",
+      "ESTIMATED_BUDGET_DESCRIPTION": "O orçamento total estimado para o projeto é de R$ 100.000,00.",
+      "ESTIMATED_TIMELINE_TITLE": "Cronograma Estimado",
+      "ESTIMATED_TIMELINE_DESCRIPTION": "O projeto terá uma duração estimada de 8 horas, com as seguintes fases principais:",
+      "TIMELINE_PLANNING": "Fase de Planejamento: 1h",
+      "TIMELINE_DEVELOPMENT": "Fase de Desenvolvimento: 3h",
+      "TIMELINE_TESTING": "Fase de Testes: 1h",
+      "TIMELINE_DEPLOYMENT": "Fase de Implantação: 1h",
+      "TIMELINE_FINAL_PRESENTATION": "Fase de Apresentação Final: 5 min",
+      "APPROVAL_TITLE": "Aprovação do Termo de Abertura",
+      "APPROVAL_DESCRIPTION": "Com a assinatura abaixo, o Patrocinador aprova formalmente o início do projeto conforme descrito neste documento."
+    },
+    "FOOTER": {
+      "TEXT": "Projeto Ligue 4 Web. Todos os direitos reservados."
+    }
+  }
+  

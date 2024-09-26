@@ -1,0 +1,26 @@
+{
+    "TITLE": "Conecta 4",
+    "HEADER": {
+      "TITLE": "Conecta 4 - Prototipo"
+    },
+    "NAV": {
+      "HOME": "Inicio",
+      "PROJECT_CHARTER": "Acta de Apertura",
+      "REQUIREMENTS": "Especificación de Requisitos",
+      "GAME_RULES": "Reglas del Juego",
+      "CONNECT_4": "Conecta 4",
+      "TIC_TAC_TOE": "Tres en Raya"
+    },
+    "CONTENT": {
+      "CONNECT_4_PROTOTYPE_TITLE": "Prototipo de Conecta 4",
+      "TIC_TAC_TOE_PROTOTYPE_TITLE": "Prototipo de Tres en Raya"
+    },
+    "BUTTONS": {
+      "RESTART_CONNECT_4": "Reiniciar Conecta 4",
+      "RESTART_TIC_TAC_TOE": "Reiniciar Tres en Raya"
+    },
+    "FOOTER": {
+      "TEXT": "Proyecto Conecta 4 Web. Todos los derechos reservados."
+    }
+  }
+  

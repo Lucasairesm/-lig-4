@@ -1,0 +1,25 @@
+{
+    "TITLE": "Ligue 4",
+    "HEADER": {
+      "TITLE": "Ligue 4 - Protótipo"
+    },
+    "NAV": {
+      "HOME": "Inicial",
+      "PROJECT_CHARTER": "Termo de Abertura",
+      "REQUIREMENTS": "Especificação de Requisitos",
+      "GAME_RULES": "Regras do Jogo",
+      "CONNECT_4": "Ligue 4",
+      "TIC_TAC_TOE": "Velha"
+    },
+    "CONTENT": {
+      "CONNECT4_PROTOTYPE_TITLE": "Protótipo do Ligue 4",
+      "TICTACTOE_PROTOTYPE_TITLE": "Protótipo do Jogo da Velha",
+      "GAME_RENDER_MESSAGE": "Aqui é onde o jogo será renderizado",
+      "RESTART_BUTTON_CONNECT4": "Reiniciar Ligue 4",
+      "RESTART_BUTTON_TICTACTOE": "Reiniciar Jogo da Velha"
+    },
+    "FOOTER": {
+      "TEXT": "Projeto Ligue 4 Web. Todos os direitos reservados."
+    }
+  }
+  

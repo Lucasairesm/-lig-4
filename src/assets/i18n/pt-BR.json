@@ -9,5 +9,208 @@
   "start": "Começar Jogo",
   "won": "venceu",
   "connect4": "Ligue 4",
-  "playerName": "Jogador 1"
+  "play": "JOGAR",
+  "rules-tic-tac-toe": "REGRAS JOGO DA VELHA",
+  "rules-connect4": "REGRAS LIGUE 4",
+  "result": "Resultado",
+  "restart-game": "Nova Partida",
+  "end-game": "Fim do Jogo",
+  "tic_tac_toe": {
+    "title": "Jogo da Velha",
+    "objective": "Objetivo",
+    "objective_text": "O primeiro jogador que conseguir alinhar 3 peças consecutivas (na horizontal, vertical ou diagonal) vence a partida.",
+    "board": "Tabuleiro",
+    "board_text": "O tabuleiro é uma grade vertical de 3 colunas por 3 linhas.",
+    "pieces": "Peças",
+    "pieces_text": "Cada jogador possui uma peça de cor e figura distinta.",
+    "rules": "Regras",
+    "rule1": "Os jogadores se alternam com um movimento de cada jogador, preenchendo o espaço vazio com a peça de sua cor em qualquer espaço do tabuleiro.",
+    "rule2": "O jogo continua até que um dos jogadores consiga alinhar 3 peças consecutivas, ou até que o tabuleiro fique completamente cheio, resultando em um empate.",
+    "end_game": "Fim de Jogo",
+    "end_game_text": "O jogo acaba após um dos jogadores conseguir alinhar as 3 peças. O vencedor é declarado pela cor escolhida. Em caso de empate, os jogadores podem reiniciar a partida ou sair do jogo."
+  },
+  "connect4_game": {
+    "title": "Ligue 4",
+    "objective": "Objetivo",
+    "objective_text": "O primeiro jogador que conseguir alinhar quatro peças consecutivas (na horizontal, vertical ou diagonal) vence a partida.",
+    "board": "Tabuleiro",
+    "board_text": "O tabuleiro é uma grade vertical de 7 colunas por 6 linhas. As peças são inseridas pelo topo e caem para a posição mais baixa disponível.",
+    "pieces": "Peças",
+    "pieces_text": "Cada jogador possui um conjunto de peças de cor distinta.",
+    "rules": "Regras",
+    "rule1": "Os jogadores se alternam com um movimento de cada jogador, inserindo uma peça em qualquer coluna.",
+    "rule2": "As peças caem na posição mais baixa disponível. O jogo continua até que um jogador alinhe 4 peças consecutivas ou o tabuleiro fique cheio, resultando em empate.",
+    "end_game": "Fim de Jogo",
+    "end_game_text": "O jogo acaba após um dos jogadores conseguir alinhar as 4 peças. O vencedor é declarado pela cor. Em caso de empate, os jogadores podem reiniciar a partida ou sair do jogo."
+  },
+  "project_opening": {
+    "title": "Projeto: Desenvolvimento do HEIL Games 4 para Web",
+    "sponsor": "Patrocinador",
+    "project_manager": "Gerente de Projeto",
+    "self_managed_team": "Equipe Autogerenciada",
+    "date": "Data",
+    "overview": "Visão Geral do Projeto",
+    "overview_text": "O objetivo deste projeto é desenvolver uma versão online do jogo clássico Conecte 4, permitindo que os jogadores compitam em um ambiente digital.",
+    "objectives": "Objetivos do Projeto",
+    "objective1": "Desenvolver uma versão online do Conecte 4 para navegadores web.",
+    "objective2": "Permitir que jogadores humanos compitam em tempo real.",
+    "objective3": "Garantir uma interface intuitiva e responsiva para uma experiência de jogo agradável.",
+    "scope": "Escopo do Projeto",
+    "scope_text": "O escopo do projeto inclui o desenvolvimento do front-end e do back-end necessários para o funcionamento do jogo.",
+    "budget": "Orçamento Estimado",
+    "budget_text": "O orçamento estimado para o projeto é de R$ 100.000.",
+    "schedule": "Cronograma Estimado",
+    "schedule_text": "O projeto deve durar 8 horas, com as seguintes fases principais:",
+    "phase1": "Fase de Planejamento: 1 hora",
+    "phase2": "Fase de Desenvolvimento: 3 horas",
+    "phase3": "Fase de Testes: 1 hora",
+    "phase4": "Fase de Implantação: 1 hora",
+    "phase5": "Apresentação Final: 5 minutos",
+    "approval": "Aprovação da Abertura do Projeto",
+    "approval_text": "Ao assinar abaixo, o Patrocinador aprova formalmente o início do projeto conforme descrito neste documento."
+  },
+  "LIGUE4_REQUIREMENTS": {
+    "TITLE": "Especificação de Requisitos Ligue 4",
+    "FUNCTIONAL": "REQUISITOS FUNCIONAIS",
+    "RF_001": {
+      "TITLE": "RF-001: Apresentação do Tabuleiro de Jogo",
+      "DESCRIPTION": "O sistema deve apresentar aos jogadores o tabuleiro, que deve ter 7 colunas com 6 linhas."
+    },
+    "RF_002": {
+      "TITLE": "RF-002: Quantidade de Jogadores",
+      "DESCRIPTION": "Cada partida deverá ter exatamente 2 jogadores."
+    },
+    "RF_003": {
+      "TITLE": "RF-003: Diferenciação entre os Jogadores",
+      "DESCRIPTION": "Cada jogador terá uma cor específica para suas peças dentro do jogo."
+    },
+    "RF_004": {
+      "TITLE": "RF-004: Controle de Peças",
+      "DESCRIPTION": "Cada jogador joga com 21 peças e só terá o controle das peças pertencentes à cor que escolher."
+    },
+    "RF_005": {
+      "TITLE": "RF-005: Posicionamento das Peças",
+      "DESCRIPTION": "A vitória da partida visa a que 4 peças sejam ligadas, podendo ser nas posições horizontal, vertical ou diagonais."
+    },
+    "RF_006": {
+      "TITLE": "RF-006: Identificador de Vitória",
+      "DESCRIPTION": "Após o jogador conseguir o ligamento das 4 peças, o sistema identifica e nomeia o vencedor pela cor das peças."
+    },
+    "RF_007": {
+      "TITLE": "RF-007: Fim de Jogo",
+      "DESCRIPTION": "Ao nomear o vencedor, o sistema deve interromper o jogo e solicitar aos jogadores uma caixa de confirmação para reinício de outra partida."
+    },
+    "RF_008": {
+      "TITLE": "RF-008: Início e Reinício de Jogo",
+      "DESCRIPTION": "O sistema deverá sortear o jogador que iniciará ou reiniciará o jogo."
+    },
+    "RF_009": {
+      "TITLE": "RF-009: 5 escolhas de cores/figuras",
+      "DESCRIPTION": "O sistema deverá oferecer uma seleção de 5 cores/figuras para o jogador escolher em suas peças."
+    },
+    "RF_010": {
+      "TITLE": "RF-010: Opção de 3 idiomas",
+      "DESCRIPTION": "O sistema deverá dar ao jogador a opção de selecionar em até 3 idiomas."
+    },
+    "RF_011": {
+      "TITLE": "RF-011: Interação Jogador X Computador",
+      "DESCRIPTION": "O sistema deverá ter a opção de o jogador também poder jogar contra a máquina."
+    }
+  },
+  "REQUIREMENTS_NON_FUNCTIONAL": {
+    "TITLE": "REQUISITOS NÃO-FUNCIONAIS",
+    "NF_001": {
+      "TITLE": "NF-001: Interface do Usuário",
+      "DESCRIPTION": "A interface deve ser intuitiva e fácil de usar, com instruções claras para novos jogadores sobre as regras e o funcionamento do jogo."
+    },
+    "NF_002": {
+      "TITLE": "NF-002: Feedback Visual",
+      "DESCRIPTION": "O sistema deve fornecer feedback acessível e eficaz para as ações e notificações sobre as jogadas, o estado do jogo, vitórias ou empates."
+    },
+    "NF_003": {
+      "TITLE": "NF-003: Tempo de Resposta",
+      "DESCRIPTION": "O sistema deve garantir que as ações dos jogadores sejam processadas e refletidas na tela em menos de 2 segundos.",
+      "RESPONSE": "o tempo de resposta está diretamente relacionado à rapidez com que o tabuleiro é exibido para o jogador."
+    },
+    "NF_004": {
+      "TITLE": "NF-004: Acessibilidade",
+      "DESCRIPTION": "O sistema deve permitir a interação com uso do mouse."
+    },
+    "NF_005": {
+      "TITLE": "NF-005: Identificação e Anúncio de Vitória",
+      "DESCRIPTION": "O sistema deve anunciar a vitória de forma visual, fornecendo informações claras sobre o vencedor."
+    }
+  },
+  "REQUIREMENTS": {
+    "DESCRIPTION": "Descrição",
+    "PRIORITY": "Prioridade",
+    "ESSENTIAL": "Essencial",
+    "IMPORTANT": "Importante",
+    "ASSOCIATION": "Associação"
+  },
+  "LIGUE4_REQUIREMENTS_EXTRA": {
+    "RF_001": {
+      "TITLE": "RF-001: Apresentação do Tabuleiro de Jogo"
+    },
+    "RF_006": {
+      "TITLE": "RF-006: Identificador de Vitória"
+    },
+    "RF_007": {
+      "TITLE": "RF-007: Fim de Jogo"
+    },
+    "RF_008": {
+      "TITLE": "RF-008: Início e Reinício de Jogo"
+    }
+  },
+  "VELHA_REQUIREMENTS": {
+    "TITLE": "Especificação de Requisitos Jogo da Velha",
+    "FUNCTIONAL": "REQUISITOS FUNCIONAIS",
+    "RF_001": {
+      "TITLE": "RF-001: Apresentação do Tabuleiro de Jogo",
+      "DESCRIPTION": "O sistema deve apresentar aos jogadores o tabuleiro, que deve ter 3 colunas com 3 linhas."
+    },
+    "RF_002": {
+      "TITLE": "RF-002: Quantidade de Jogadores",
+      "DESCRIPTION": "Cada partida deverá ter exatamente 2 jogadores."
+    },
+    "RF_003": {
+      "TITLE": "RF-003: Diferenciação entre os Jogadores",
+      "DESCRIPTION": "Cada jogador terá uma cor específica para suas peças dentro do jogo."
+    },
+    "RF_004": {
+      "TITLE": "RF-004: Controle de Peças",
+      "DESCRIPTION": "Cada jogador joga com 21 peças e só terá o controle das peças pertencentes à cor que escolher."
+    },
+    "RF_005": {
+      "TITLE": "RF-005: Posicionamento das Peças",
+      "DESCRIPTION": "A vitória da partida visa a que 3 peças sejam ligadas, podendo ser nas posições horizontal, vertical ou diagonais."
+    },
+    "RF_006": {
+      "TITLE": "RF-006: Identificador de Vitória",
+      "DESCRIPTION": "Após o jogador conseguir o ligamento das 4 peças, o sistema identifica e nomeia o vencedor pela cor das peças."
+    },
+    "RF_007": {
+      "TITLE": "RF-007: Fim de Jogo",
+      "DESCRIPTION": "Ao nomear o vencedor, o sistema deve interromper o jogo e solicitar aos jogadores uma caixa de confirmação para reinício de outra partida."
+    },
+    "RF_008": {
+      "TITLE": "RF-008: Início e Reinício de Jogo",
+      "DESCRIPTION": "O sistema deverá sortear o jogador que iniciará ou reiniciará o jogo."
+    },
+    "RF_009": {
+      "TITLE": "RF-009: 5 escolhas de cores/figuras",
+      "DESCRIPTION": "O sistema deverá oferecer uma seleção de 5 cores/figuras para o jogador escolher em suas peças."
+    },
+    "RF_010": {
+      "TITLE": "RF-010: Opção de 3 idiomas",
+      "DESCRIPTION": "O sistema deverá dar ao jogador a opção de selecionar em até 3 idiomas."
+    },
+    "RF_011": {
+      "TITLE": "RF-011: Interação Jogador X Computador",
+      "DESCRIPTION": "O sistema deverá ter a opção de o jogador também poder jogar contra a máquina."
+    }
+  },
+  "NF_SECTION": {
+    "TITLE": "REQUISITOS NÃO-FUNCIONAIS"
+  }
 }

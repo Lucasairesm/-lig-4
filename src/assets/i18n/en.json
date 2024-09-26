@@ -7,5 +7,210 @@
   "enterPlayerName1": "Enter Player 1 Name",
   "enterPlayerName2": "Enter Player 2 Name",
   "start": "Start Game",
-  "connect4": "Connect 4"
+  "won": "won",
+  "connect4": "Connect 4",
+  "play": "PLAY",
+  "rules-tic-tac-toe": "TIC TAC TOE RULES",
+  "rules-connect4": "CONNECT 4 RULES",
+  "result": "Result",
+  "restart-game": "Restart Game",
+  "end-game": "End Game",
+  "tic_tac_toe": {
+    "title": "Tic Tac Toe",
+    "objective": "Objective",
+    "objective_text": "The first player to align 3 consecutive pieces (horizontally, vertically, or diagonally) wins the game.",
+    "board": "Board",
+    "board_text": "The board is a 3x3 grid.",
+    "pieces": "Pieces",
+    "pieces_text": "Each player has a piece with a distinct color and symbol.",
+    "rules": "Rules",
+    "rule1": "Players take turns making one move, placing their piece on any empty cell.",
+    "rule2": "The game continues until a player aligns 3 consecutive pieces, or the board is completely full, resulting in a tie.",
+    "end_game": "End of Game",
+    "end_game_text": "The game ends when a player aligns 3 pieces, declaring them the winner by their chosen color. In case of a tie, players may restart the game or exit."
+  },
+  "connect4_game": {
+    "title": "Connect 4",
+    "objective": "Objective",
+    "objective_text": "The first player to align 4 consecutive pieces (horizontally, vertically, or diagonally) wins the game.",
+    "board": "Board",
+    "board_text": "The board is a vertical grid with 7 columns and 6 rows. Pieces are dropped into the columns and fall to the lowest available space.",
+    "pieces": "Pieces",
+    "pieces_text": "Each player has a set of pieces in a distinct color (usually red and yellow).",
+    "rules": "Rules",
+    "rule1": "Players take turns making one move by dropping their piece into any column.",
+    "rule2": "The piece falls into the lowest available position in the column. The game continues until a player aligns 4 consecutive pieces, or the board is full, resulting in a tie.",
+    "end_game": "End of Game",
+    "end_game_text": "The game ends when a player aligns 4 pieces, declaring them the winner by their chosen color. In case of a tie, players may restart the game or exit."
+  },
+  "project_opening": {
+    "title": "Project: HEIL Games 4 Development for Web",
+    "sponsor": "Sponsor",
+    "project_manager": "Project Manager",
+    "self_managed_team": "Self Managed Team",
+    "date": "Date",
+    "overview": "Project Overview",
+    "overview_text": "The goal of this project is to develop an online version of the classic Connect 4 game, allowing players to compete in a digital environment.",
+    "objectives": "Project Objectives",
+    "objective1": "Develop an online version of Connect 4 for web browsers.",
+    "objective2": "Allow human players to compete in real time.",
+    "objective3": "Ensure an intuitive and responsive interface for a pleasant gaming experience.",
+    "scope": "Project Scope",
+    "scope_text": "The project scope includes the development of both front-end and back-end necessary for the game operation.",
+    "budget": "Estimated Budget",
+    "budget_text": "The estimated budget for the project is R$ 100,000.",
+    "schedule": "Estimated Schedule",
+    "schedule_text": "The project is expected to last for 8 hours, with the following key phases:",
+    "phase1": "Planning Phase: 1 hour",
+    "phase2": "Development Phase: 3 hours",
+    "phase3": "Testing Phase: 1 hour",
+    "phase4": "Deployment Phase: 1 hour",
+    "phase5": "Final Presentation: 5 minutes",
+    "approval": "Approval of the Project Opening",
+    "approval_text": "By signing below, the Sponsor formally approves the start of the project as described in this document."
+  },
+  "LIGUE4_REQUIREMENTS": {
+    "TITLE": "Connect 4 Requirements Specification",
+    "FUNCTIONAL": "FUNCTIONAL REQUIREMENTS",
+    "RF_001": {
+      "TITLE": "RF-001: Game Board Display",
+      "DESCRIPTION": "The system must display the game board to the players, which should have 7 columns with 6 rows."
+    },
+    "RF_002": {
+      "TITLE": "RF-002: Number of Players",
+      "DESCRIPTION": "Each match must have exactly 2 players."
+    },
+    "RF_003": {
+      "TITLE": "RF-003: Player Differentiation",
+      "DESCRIPTION": "Each player will have a specific color for their game pieces."
+    },
+    "RF_004": {
+      "TITLE": "RF-004: Piece Control",
+      "DESCRIPTION": "Each player plays with 21 pieces and will only control the pieces belonging to the color they chose."
+    },
+    "RF_005": {
+      "TITLE": "RF-005: Piece Placement",
+      "DESCRIPTION": "The goal of the match is to connect 4 pieces, which can be aligned horizontally, vertically, or diagonally."
+    },
+    "RF_006": {
+      "TITLE": "RF-006: Victory Identifier",
+      "DESCRIPTION": "Once a player connects 4 pieces, the system identifies and declares the winner based on the color of the pieces."
+    },
+    "RF_007": {
+      "TITLE": "RF-007: End of Game",
+      "DESCRIPTION": "After declaring the winner, the system must stop the game and prompt the players with a confirmation box to restart another match."
+    },
+    "RF_008": {
+      "TITLE": "RF-008: Game Start and Restart",
+      "DESCRIPTION": "The system must randomly select which player will start or restart the game."
+    },
+    "RF_009": {
+      "TITLE": "RF-009: 5 Color/Figure Choices",
+      "DESCRIPTION": "The system must offer a selection of 5 colors/figures for the player to choose for their pieces."
+    },
+    "RF_010": {
+      "TITLE": "RF-010: Option for 3 Languages",
+      "DESCRIPTION": "The system must allow the player to select from up to 3 languages."
+    },
+    "RF_011": {
+      "TITLE": "RF-011: Player vs Computer Interaction",
+      "DESCRIPTION": "The system must have the option for the player to also play against the computer."
+    }
+  },
+  "REQUIREMENTS_NON_FUNCTIONAL": {
+    "TITLE": "NON-FUNCTIONAL REQUIREMENTS",
+    "NF_001": {
+      "TITLE": "NF-001: User Interface",
+      "DESCRIPTION": "The interface should be intuitive and easy to use, with clear instructions for new players on the game rules and functionality."
+    },
+    "NF_002": {
+      "TITLE": "NF-002: Visual Feedback",
+      "DESCRIPTION": "The system must provide accessible and effective feedback for actions and notifications about the moves, game state, victories, or ties."
+    },
+    "NF_003": {
+      "TITLE": "NF-003: Response Time",
+      "DESCRIPTION": "The system must ensure that player actions are processed and reflected on the screen in under 2 seconds.",
+      "RESPONSE": "the response time is directly related to how quickly the board is displayed to the player."
+    },
+    "NF_004": {
+      "TITLE": "NF-004: Accessibility",
+      "DESCRIPTION": "The system must allow interaction using a mouse."
+    },
+    "NF_005": {
+      "TITLE": "NF-005: Victory Announcement",
+      "DESCRIPTION": "The system must visually announce the victory, providing clear information about the winner."
+    }
+  },
+  "REQUIREMENTS": {
+    "DESCRIPTION": "Description",
+    "PRIORITY": "Priority",
+    "ESSENTIAL": "Essential",
+    "IMPORTANT": "Important",
+    "ASSOCIATION": "Association"
+  },
+  "LIGUE4_REQUIREMENTS_EXTRA": {
+    "RF_001": {
+      "TITLE": "RF-001: Game Board Display"
+    },
+    "RF_006": {
+      "TITLE": "RF-006: Victory Identifier"
+    },
+    "RF_007": {
+      "TITLE": "RF-007: End of Game"
+    },
+    "RF_008": {
+      "TITLE": "RF-008: Game Start and Restart"
+    }
+  },
+  "VELHA_REQUIREMENTS": {
+    "TITLE": "Tic-Tac-Toe Requirements Specification",
+    "FUNCTIONAL": "FUNCTIONAL REQUIREMENTS",
+    "RF_001": {
+      "TITLE": "RF-001: Game Board Display",
+      "DESCRIPTION": "The system must display the game board to the players, which should have 3 columns with 3 rows."
+    },
+    "RF_002": {
+      "TITLE": "RF-002: Number of Players",
+      "DESCRIPTION": "Each match must have exactly 2 players."
+    },
+    "RF_003": {
+      "TITLE": "RF-003: Player Differentiation",
+      "DESCRIPTION": "Each player will have a specific color for their game pieces."
+    },
+    "RF_004": {
+      "TITLE": "RF-004: Piece Control",
+      "DESCRIPTION": "Each player plays with 21 pieces and will only control the pieces belonging to the color they chose."
+    },
+    "RF_005": {
+      "TITLE": "RF-005: Piece Placement",
+      "DESCRIPTION": "The goal of the match is to connect 3 pieces, which can be aligned horizontally, vertically, or diagonally."
+    },
+    "RF_006": {
+      "TITLE": "RF-006: Victory Identifier",
+      "DESCRIPTION": "Once a player connects 4 pieces, the system identifies and declares the winner based on the color of the pieces."
+    },
+    "RF_007": {
+      "TITLE": "RF-007: End of Game",
+      "DESCRIPTION": "After declaring the winner, the system must stop the game and prompt the players with a confirmation box to restart another match."
+    },
+    "RF_008": {
+      "TITLE": "RF-008: Game Start and Restart",
+      "DESCRIPTION": "The system must randomly select which player will start or restart the game."
+    },
+    "RF_009": {
+      "TITLE": "RF-009: 5 Color/Figure Choices",
+      "DESCRIPTION": "The system must offer a selection of 5 colors/figures for the player to choose for their pieces."
+    },
+    "RF_010": {
+      "TITLE": "RF-010: Option for 3 Languages",
+      "DESCRIPTION": "The system must allow the player to select from up to 3 languages."
+    },
+    "RF_011": {
+      "TITLE": "RF-011: Player vs Computer Interaction",
+      "DESCRIPTION": "The system must have the option for the player to also play against the computer."
+    }
+  },
+  "NF_SECTION": {
+    "TITLE": "NON-FUNCTIONAL REQUIREMENTS"
+  }
 }

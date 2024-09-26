@@ -23,12 +23,15 @@ import { HomeComponent } from "./components/home/home.component";
 })
 export class AppComponent implements OnInit {
 
+  idiomaSelecionado : string = 'pt-BR';
+
   constructor(
     private translateService: TranslateService
   ) {}
 
   setLanguage(lang: string): void {
     this.translateService.use(lang);
+    this.idiomaSelecionado = lang;
   }
 
   // Recupera o idioma salvo do localStorage

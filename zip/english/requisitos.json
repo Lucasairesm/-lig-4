@@ -1,0 +1,103 @@
+{
+    "TITLE": "Requirements Specification - Connect 4",
+    "HEADER": {
+      "TITLE": "Connect 4 - Requirements Specification"
+    },
+    "NAV": {
+      "HOME": "Home",
+      "PROJECT_CHARTER": "Project Charter",
+      "REQUIREMENTS": "Requirements Specification",
+      "GAME_RULES": "Game Rules",
+      "CONNECT_4": "Connect 4",
+      "TIC_TAC_TOE": "Tic-Tac-Toe"
+    },
+    "CONTENT": {
+      "REQUIREMENTS_SPECIFICATION_TITLE": "Connect 4 Requirements Specification",
+      "FUNCTIONAL_REQUIREMENTS_TITLE": "FUNCTIONAL REQUIREMENTS",
+      "FR001": {
+        "TITLE": "FR-001: Game Board Display",
+        "DESCRIPTION": "The system must display the game board to players, which must have 7 columns and 6 rows.",
+        "ASSOCIATION": "[FR-002] Number of players. [NFR-001] The interface must be intuitive and easy to use."
+      },
+      "FR002": {
+        "TITLE": "FR-002: Number of Players",
+        "DESCRIPTION": "Each match must have exactly 2 players.",
+        "ASSOCIATION": "[FR-001] Game board display."
+      },
+      "FR003": {
+        "TITLE": "FR-003: Player Differentiation",
+        "DESCRIPTION": "Each player will have a specific color for their pieces in the game.",
+        "ASSOCIATION": "[FR-001] Game board display. [FR-002] Number of players."
+      },
+      "FR004": {
+        "TITLE": "FR-004: Piece Control",
+        "DESCRIPTION": "Each player plays with 21 pieces and will only control the pieces of the color they chose.",
+        "ASSOCIATION": "[FR-005] Piece placement. [NFR-001] User Interface. [NFR-003] Response Time. [NFR-004] Accessibility."
+      },
+      "FR005": {
+        "TITLE": "FR-005: Piece Placement",
+        "DESCRIPTION": "The goal of the game is to connect 4 pieces, either horizontally, vertically, or diagonally.",
+        "ASSOCIATION": "[FR-001] Game board display. [NFR-002] Visual Feedback. [NFR-003] Response Time."
+      },
+      "FR006": {
+        "TITLE": "FR-006: Victory Identifier",
+        "DESCRIPTION": "Once a player connects 4 pieces, the system identifies and declares the winner by the color of the pieces.",
+        "ASSOCIATION": "[FR-003] Player differentiation. [NFR-002] Visual Feedback."
+      },
+      "FR007": {
+        "TITLE": "FR-007: End of Game",
+        "DESCRIPTION": "Upon declaring a winner, the system must stop the game and present the players with a confirmation box to restart another game.",
+        "ASSOCIATION": "[FR-002] Number of players. [NFR-001] The interface must be intuitive and easy to use."
+      },
+      "FR008": {
+        "TITLE": "FR-008: Game Start and Restart",
+        "DESCRIPTION": "The system should randomly select the player who will start or restart the game.",
+        "ASSOCIATION": "[FR-002] Number of players. [NFR-001] The interface must be intuitive and easy to use."
+      },
+      "FR009": {
+        "TITLE": "FR-009: 5 Color/Figure Choices",
+        "DESCRIPTION": "The system should offer a selection of 5 colors/figures for the player to choose for their pieces.",
+        "ASSOCIATION": "[FR-002] Number of players. [NFR-001] The interface must be intuitive and easy to use."
+      },
+      "FR010": {
+        "TITLE": "FR-010: Option for 3 Languages",
+        "DESCRIPTION": "The system should allow the player to select up to 3 languages.",
+        "ASSOCIATION": "[FR-002] Number of players. [NFR-001] The interface must be intuitive and easy to use."
+      },
+      "FR011": {
+        "TITLE": "FR-011: Player vs. Computer Interaction",
+        "DESCRIPTION": "The system should have an option for the player to play against the computer.",
+        "ASSOCIATION": "[FR-002] Number of players. [NFR-001] The interface must be intuitive and easy to use."
+      },
+      "NON_FUNCTIONAL_REQUIREMENTS_TITLE": "NON-FUNCTIONAL REQUIREMENTS",
+      "NFR001": {
+        "TITLE": "NFR-001: User Interface",
+        "DESCRIPTION": "The interface must be intuitive and easy to use, with clear instructions for new players on the game's rules and operation.",
+        "ASSOCIATION": "[FR-001] Game board display. [NFR-002] Visual feedback should include animations and graphical effects, such as victory visualization."
+      },
+      "NFR002": {
+        "TITLE": "NFR-002: Visual Feedback",
+        "DESCRIPTION": "The system must provide accessible and effective feedback for actions and notifications about moves, game state, victories, or ties.",
+        "ASSOCIATION": "[FR-006] Victory identifier. [FR-007] End of game. [FR-008] Game restart. [NFR-009] Tie."
+      },
+      "NFR003": {
+        "TITLE": "NFR-003: Response Time",
+        "DESCRIPTION": "The system must ensure that player actions are processed and displayed on the screen in less than 2 seconds.",
+        "ASSOCIATION": "[FR-001] Game board display: the response time is directly related to the speed at which the board is displayed for the player."
+      },
+      "NFR004": {
+        "TITLE": "NFR-004: Accessibility",
+        "DESCRIPTION": "The system must allow interaction using a mouse.",
+        "ASSOCIATION": "[FR-001] Game board display."
+      },
+      "NFR005": {
+        "TITLE": "NFR-005: Victory Identification and Announcement",
+        "DESCRIPTION": "The system must visually announce the victory, providing clear information about the winner.",
+        "ASSOCIATION": "[FR-006] Victory identifier."
+      }
+    },
+    "FOOTER": {
+      "TEXT": "HEIL Games Web Project. All rights reserved."
+    }
+  }
+  

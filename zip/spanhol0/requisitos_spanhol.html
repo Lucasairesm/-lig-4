@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificación de Requisitos - Conecta 4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Conecta 4 - Especificación de Requisitos</h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="termo_de_abertura.html">Acta de Apertura</a></li>
+            <li><a href="requisitos.html">Especificación de Requisitos</a></li>
+            <li><a href="regras_do_jogo.html">Reglas del Juego</a></li>
+            <li><a href="lig4.html">Conecta 4</a></li>
+            <li><a href="velha.html">Tres en Raya</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <h2>Especificación de Requisitos Conecta 4</h2>
+
+            <h3>REQUISITOS FUNCIONALES</h3>
+
+            <div class="requirement">
+                <h4>RF-001: Presentación del Tablero de Juego</h4>
+                <p><strong>Descripción:</strong> El sistema debe mostrar el tablero a los jugadores, que debe tener 7
+                    columnas y 6 filas.</p>
+                <p><strong>Prioridad:</strong> Esencial.</p>
+                <p><strong>Asociación:</strong> </p>
+                <ul>
+                    <li>[RF-002] Cantidad de jugadores. [NF-001] La interfaz debe ser
+                        intuitiva y fácil de usar.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="requirement">
+                <h4>RF-002: Cantidad de Jugadores</h4>
+                <p><strong>Descripción:</strong> Cada partida debe tener exactamente 2 jugadores.</p>
+                <p><strong>Prioridad:</strong> Esencial.</p>
+                <p><strong>Asociación:</strong> </p>
+                <ul>
+                    <li>
+                        [RF-001] Presentación del tablero de juego.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="requirement">
+                <h4>RF-003: Diferenciación entre los Jugadores</h4>
+                <p><strong>Descripción:</strong> Cada jugador tendrá un color específico para sus piezas en el juego.</p>
+                <p><strong>Prioridad:</strong> Esencial.</p>
+                <p><strong>Asociación:</strong> </p>
+                <ul>
+                    <li>
+                    [RF-001] Presentación del tablero de juego. [RF-002] Cantidad de
+                    jugadores.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="requirement">
+                <h4>RF-004: Control de Piezas</h4>
+                <p><strong>Descripción:</strong> Cada jugador juega con 21 piezas y solo tendrá control sobre las piezas
+                    de su color elegido.</p>
+                <p><strong>Prioridad:</strong> Esencial.</p>
+                <p><strong>Asociación:</strong> </p>
+                <ul>
+                    <li>
+                        [RF-005] Posicionamiento de las piezas. [NF-001] Interfaz de Usuario.
+                        [NF-003] Tiempo de Respuesta. [NF-004] Accesibilidad.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="requirement">
+                <h4>RF-005: Posicionamiento de las Piezas</h4>
+                <p><strong>Descripción:</strong> El objetivo del juego es conectar 4 piezas, ya sea en posiciones horizontales, verticales o diagonales.</p>
+                <p><strong>Prioridad:</strong> Esencial.</p>
+                <p><strong>Asociación:</strong> </p>
+                <ul>
+                    <li>[RF-001] Presentación del tablero de juego. [NF-002] Retroalimentación visual.
+                        [NF-003] Tiempo de Respuesta.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="requirement">
+                <h4>RF-006: Identificador de Victoria</h4>
+                <p><strong>Descripción:</strong> Después de que un jugador conecte 4 piezas, el sistema identificará y declarará al ganador por el color de las piezas.</p>
+                <p><strong>Prioridad:</strong> Esencial.</p>
+                <p><strong>Asociación:</strong></p>
+                    <ul>
+                        <li> [RF-003] Diferenciación entre los jugadores. [NF-002] Retroalimentación Visual.</li>
+                    </ul>
+            </div>
+
+            <div class="requirement">
+                <h4>RF-007: Fin del Juego</h4>
+                <p><strong>Descripción:</strong> Al declarar al ganador, el sistema debe detener el juego y mostrar una caja de confirmación para que los jugadores puedan reiniciar otra partida.</p>
+                <p><strong>Prioridad:</strong> Esencial.</p>
+                <p><strong>Asociación:</strong> </p>
+                    <ul>
+                        <li>[RF-002] Cantidad de jugadores. [NF-001] La interfaz debe ser
+                            intuitiva y fácil de usar.
+                        </li>
+                    </ul>
+            </div>
+
+            <div class="requirement">
+                <h4>RF-008: Inicio y Reinicio del Juego</h4>
+                <p><strong>Descripción:</strong> El sistema debe sortear qué jugador comenzará o reiniciará el juego.</p>
+                <p><strong>Prioridad:</strong> Esencial.</p>
+                <p><strong>Asociación:</strong> </p>
+                    <ul>
+                        <li>[RF-002] Cantidad de jugadores. [NF-001] La interfaz debe ser
+                            intuitiva y fácil de usar.
+                        </li>
+                    </ul>
+            </div>
+            
+            <div class="requirement">
+                <h4>RF-009: 5 opciones de colores/figuras</h4>
+                <p><strong>Descripción:</strong> El sistema deberá ofrecer una selección de 5 colores/figuras para que el jugador elija para sus piezas.</p>
+                <p><strong>Prioridad:</strong> Esencial.</p>
+                <p><strong>Asociación:</strong> </p>
+                    <ul>
+                        <li>[RF-002] Cantidad de jugadores. [NF-001] La interfaz debe ser
+                            intuitiva y fácil de usar.</li>
+                    </ul>
+            </div>
+
+            <div class="requirement">
+                <h4>RF-010: Opción de 3 Idiomas</h4>
+                <p><strong>Descripción:</strong> El sistema debe permitir al jugador seleccionar hasta 3 idiomas.</p>
+                <p><strong>Prioridad:</strong> Esencial.</p>
+                <p><strong>Asociación:</strong> </p>
+                    <ul>
+                        <li>[RF-002] Cantidad de jugadores. [NF-001] La interfaz debe ser
+                            intuitiva y fácil de usar.</li>
+                    </ul>
+            </div>
+
+            <div class="requirement">
+                <h4>RF-011: Interacción Jugador vs. Computadora</h4>
+                <p><strong>Descripción:</strong> El sistema debe tener la opción de que el jugador también pueda jugar contra la máquina.</p>
+                <p><strong>Prioridad:</strong> Esencial.</p>
+                <p><strong>Asociación:</strong> </p>
+                    <ul>
+                        <li>[RF-002] Cantidad de jugadores. [NF-001] La interfaz debe ser
+                            intuitiva y fácil de usar.</li>
+                    </ul>
+            </div>
+
+            <h3>REQUISITOS NO FUNCIONALES</h3>
+
+            <div class="requirement">
+                <h4>NF-001: Interfaz de Usuario</h4>
+                <p><strong>Descripción:</strong> La interfaz debe ser intuitiva y fácil de usar, con instrucciones claras para los nuevos jugadores sobre las reglas y el funcionamiento del juego.</p>
+                <p><strong>Prioridad:</strong> Importante.</p>
+                <p><strong>Asociación:</strong> </p>
+                    <ul>
+                        <li>[RF-001] Presentación del tablero de juego. [NF-002] La retroalimentación visual
+                            debe incluir animaciones y efectos gráficos, como visualización de la victoria.
+                        </li>
+                    </ul>
+            </div>
+
+            <div class="requirement">
+                <h4>NF-002: Retroalimentación Visual</h4>
+                <p><strong>Descripción:</strong> El sistema debe proporcionar retroalimentación accesible y efectiva para las acciones y
+                    notificaciones sobre las jugadas, el estado del juego, victorias o empates.</p>
+                <p><strong>Prioridad:</strong> Esencial.</p>
+                <p><strong>Asociación:</strong>
+                    <ul>
+                        <li>[RF-006] Identificador de victoria.
+                            [RF-007] Fin del juego. 
+                            [RF-008] Reinicio del juego. 
+                            [NF-009] Empate.
+                        </li>
+                    </ul>
+            </div>
+
+            <div class="requirement">
+                <h4>NF-003: Tiempo de Respuesta</h4>
+                <p><strong>Descripción:</strong> El sistema debe garantizar que las acciones de los jugadores se procesen y
+                    se reflejen en la pantalla en menos de 2 segundos.</p>
+                <p><strong>Prioridad:</strong> Esencial.</p>
+                <p><strong>Asociación:</strong> 
+                    <ul>
+                        <li>[RF-001] Presentación del tablero de juego: el tiempo de respuesta está directamente relacionado con la rapidez con la que se muestra el tablero al jugador.</li>
+                    </ul>
+            </div>
+
+            <div class="requirement">
+                <h4>NF-004: Accesibilidad</h4>
+                <p><strong>Descripción:</strong> El sistema debe permitir la interacción con el uso del mouse.</p>
+                <p><strong>Prioridad:</strong> Esencial.</p>
+                <p><strong>Asociación:</strong> </p>
+                <ul>
+                    <li>[RF-001] Presentación del tablero de juego.</li>
+                </ul>
+            </div>
+
+            <div class="requirement">
+                <h4>NF-005: Identificación y Anuncio de Victoria</h4>
+                <p><strong>Descripción:</strong> El sistema debe anunciar la victoria de forma visual, proporcionando información clara sobre el ganador.</p>
+                <p><strong>Prioridad:</strong> Esencial.</p>
+                <p><strong>Asociación:</strong> </p>
+                <ul>
+                    <li>[RF-006] Identificador de victoria.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 - Proyecto HEIL Games Web. Todos los derechos reservados.</p>
+    </div>
+</body>
+
+</html>

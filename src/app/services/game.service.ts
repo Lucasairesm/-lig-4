@@ -82,19 +82,29 @@ export class GameService {
   }
 
   // Verifica se houve vitória
-  checkVictory(rowIndex: number, colIndex: number): boolean {
-    const currentColor = this.currentPlayer.value?.cor;
+  // Exemplo da função checkVictory em game.service.ts
+  public checkVictory(rowIndex: number, colIndex: number, playerColor?: string): boolean {
+    const currentColor = playerColor || this.currentPlayer.value?.cor;  // Usa a cor passada ou a do jogador atual
     if (!currentColor) return false;
 
+    console.log(`Verificando vitória para o jogador com a cor: ${currentColor}, posição: (${rowIndex}, ${colIndex})`);
+
+    // Verifica as condições de vitória (linhas, colunas, diagonais)
     const victory = this.checkHorizontal(rowIndex, currentColor) ||
                     this.checkVertical(colIndex, currentColor) ||
                     this.checkDiagonal(rowIndex, colIndex, currentColor);
 
-    if (victory) {
-      console.log(`Jogador ${this.currentPlayer.value?.nome} venceu!`);  // Log de vitória
+    if (victory && currentColor === this.currentPlayer.value?.cor) {
+      console.log(`Jogador com cor ${currentColor} venceu!`);  // Jogador atual vence
+    } else if (victory) {
+      console.log(`Jogador com cor ${currentColor} venceria com essa jogada!`);  // Simulação de vitória para o oponente
+    } else {
+      console.log(`Nenhuma vitória detectada para o jogador com cor ${currentColor}, posição: (${rowIndex}, ${colIndex})`);
     }
+
     return victory;
   }
+
 
   checkVictoryOrTie(row: number, col: number): boolean {
     if (this.checkVictory(row, col)) {

@@ -1,0 +1,47 @@
+{
+    "TITLE": "Acta de Apertura del Proyecto - HEIL GAMES Web",
+    "HEADER": {
+      "TITLE": "HEIL Games - Acta de Apertura del Proyecto"
+    },
+    "NAV": {
+      "HOME": "Inicio",
+      "PROJECT_CHARTER": "Acta de Apertura",
+      "REQUIREMENTS": "Especificación de Requisitos",
+      "GAME_RULES": "Reglas del Juego",
+      "CONNECT_4": "Conecta 4",
+      "TIC_TAC_TOE": "Tres en Raya"
+    },
+    "CONTENT": {
+      "PROJECT_TITLE": "Proyecto: Desarrollo de HEIL Games 4 para Web",
+      "SPONSOR": "Patrocinador:",
+      "PROJECT_MANAGER": "Gerente del Proyecto:",
+      "SELF_MANAGED_TEAM": "Equipo autogestionado",
+      "DATE": "Fecha:",
+      "OVERVIEW_TITLE": "Visión General del Proyecto",
+      "OVERVIEW_DESCRIPTION": "El proyecto de desarrollo del juego Conecta 4 para la web tiene como objetivo crear una versión en línea del clásico juego de mesa, permitiendo que los jugadores compitan entre sí en un entorno digital.",
+      "OBJECTIVES_TITLE": "Objetivos del Proyecto",
+      "OBJECTIVE_1": "Desarrollar una versión en línea del juego Conecta 4 para que funcione en navegadores web.",
+      "OBJECTIVE_2": "Permitir que los jugadores humanos compitan en tiempo real.",
+      "OBJECTIVE_3": "Asegurar una interfaz intuitiva y receptiva para una experiencia de juego agradable.",
+      "SCOPE_TITLE": "Alcance del Proyecto",
+      "SCOPE_DESCRIPTION": "El alcance del proyecto incluye:",
+      "SCOPE_ITEM_1": "Desarrollo del front-end y back-end necesarios para el funcionamiento del juego.",
+      "SCOPE_ITEM_2": "Implementación de un sistema de gestión de partidas entre jugadores.",
+      "SCOPE_ITEM_3": "Pruebas y validación del sistema para garantizar la estabilidad y usabilidad del juego.",
+      "BUDGET_TITLE": "Presupuesto Estimado",
+      "BUDGET_AMOUNT": "El presupuesto total estimado para el proyecto es de R$ 100.000,00.",
+      "TIMELINE_TITLE": "Cronograma Estimado",
+      "TIMELINE_DESCRIPTION": "El proyecto tendrá una duración estimada de 8 horas, con las siguientes fases principales:",
+      "TIMELINE_PLANNING": "Fase de Planificación: 1h",
+      "TIMELINE_DEVELOPMENT": "Fase de Desarrollo: 3h",
+      "TIMELINE_TESTING": "Fase de Pruebas: 1h",
+      "TIMELINE_DEPLOYMENT": "Fase de Implementación: 1h",
+      "TIMELINE_FINAL_PRESENTATION": "Fase de Presentación Final: 5 min",
+      "APPROVAL_TITLE": "Aprobación del Acta de Apertura",
+      "APPROVAL_DESCRIPTION": "Con la firma a continuación, el Patrocinador aprueba formalmente el inicio del proyecto tal como se describe en este documento."
+    },
+    "FOOTER": {
+      "TEXT": "Proyecto Conecta 4 Web. Todos los derechos reservados."
+    }
+  }
+  

@@ -1,0 +1,34 @@
+{
+    "TITLE": "Player Manual - Connect 4",
+    "HEADER": {
+      "TITLE": "Connect 4 - Player Manual"
+    },
+    "NAV": {
+      "HOME": "Home",
+      "PROJECT_CHARTER": "Project Charter",
+      "REQUIREMENTS": "Requirements Specification",
+      "GAME_RULES": "Game Rules",
+      "CONNECT_4": "Connect 4",
+      "TIC_TAC_TOE": "Tic-Tac-Toe"
+    },
+    "CONTENT": {
+      "GAME_TITLE": "Connect 4",
+      "OBJECTIVE_TITLE": "Objective",
+      "OBJECTIVE_DESCRIPTION": "The first player to align four consecutive pieces (horizontally, vertically, or diagonally) wins the game.",
+      "BOARD_TITLE": "Board",
+      "BOARD_DESCRIPTION": "The board is a vertical grid of 7 columns by 6 rows. It is positioned so that pieces are inserted from the top of the columns and fall to the lowest available row in that column.",
+      "PIECES_TITLE": "Pieces",
+      "PIECES_DESCRIPTION": "Each player has a set of pieces in a distinct color (usually red and yellow).",
+      "RULES_TITLE": "Rules",
+      "RULES_ITEM_1": "Players alternate turns, with each player inserting one piece of their color into any column on the board.",
+      "RULES_ITEM_2": "The piece falls to the lowest available position in the column, with each subsequent piece filling the empty spaces or resting on the piece below.",
+      "RULES_ITEM_3": "The game continues until one player aligns four consecutive pieces, or until the board is completely filled, resulting in a draw.",
+      "END_GAME_TITLE": "End of Game",
+      "END_GAME_DESCRIPTION": "The game ends when one player successfully aligns four pieces, and the winner is declared based on the player's chosen color. At the end, the player must click the button to end the game and start a new one.",
+      "END_GAME_DRAW_DESCRIPTION": "In the event of a draw, players will have the option to restart the game or exit."
+    },
+    "FOOTER": {
+      "TEXT": "HEIL Web Project. All rights reserved."
+    }
+  }
+  

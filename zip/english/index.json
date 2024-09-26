@@ -1,0 +1,26 @@
+{
+    "TITLE": "Connect 4",
+    "HEADER": {
+      "TITLE": "Connect 4 - Prototype"
+    },
+    "NAV": {
+      "HOME": "Home",
+      "PROJECT_CHARTER": "Project Charter",
+      "REQUIREMENTS": "Requirements Specification",
+      "GAME_RULES": "Game Rules",
+      "CONNECT_4": "Connect 4",
+      "TIC_TAC_TOE": "Tic-Tac-Toe"
+    },
+    "CONTENT": {
+      "CONNECT_4_PROTOTYPE_TITLE": "Connect 4 Prototype",
+      "TIC_TAC_TOE_PROTOTYPE_TITLE": "Tic-Tac-Toe Prototype"
+    },
+    "BUTTONS": {
+      "RESTART_CONNECT_4": "Restart Connect 4",
+      "RESTART_TIC_TAC_TOE": "Restart Tic-Tac-Toe"
+    },
+    "FOOTER": {
+      "TEXT": "Connect 4 Web Project. All rights reserved."
+    }
+  }
+  

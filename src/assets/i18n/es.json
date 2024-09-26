@@ -6,6 +6,205 @@
   "player2Name": "Nombre del Jugador 2",
   "enterPlayerName1": "Ingrese el Nombre del Jugador 1",
   "enterPlayerName2": "Ingrese el Nombre del Jugador 2",
-  "start": "Iniciar Juego",
-  "connect4": "Conecta 4"
+  "start": "Comenzar Juego",
+  "won": "ganó",
+  "connect4": "Conecta 4",
+  "play": "JUGAR",
+  "rules-tic-tac-toe": "REGLAS TRES EN RAYA",
+  "rules-connect4": "REGLAS CONECTA 4",
+  "result": "Resultado",
+  "restart-game": "Nueva Partida",
+  "end-game": "Fin del Juego",
+  "tic_tac_toe": {
+    "title": "Tres en Raya",
+    "objective": "Objetivo",
+    "objective_text": "El primer jugador que logre alinear 3 piezas consecutivas (en horizontal, vertical o diagonal) gana la partida.",
+    "board": "Tablero",
+    "board_text": "El tablero es una cuadrícula vertical de 3 columnas por 3 filas.",
+    "pieces": "Piezas",
+    "pieces_text": "Cada jugador tiene una pieza de color y figura distinta.",
+    "rules": "Reglas",
+    "rule1": "Los jugadores se alternan con un movimiento por jugador, llenando un espacio vacío con su pieza en cualquier lugar del tablero.",
+    "rule2": "El juego continúa hasta que uno de los jugadores logre alinear 3 piezas consecutivas, o hasta que el tablero esté completamente lleno, resultando en empate.",
+    "end_game": "Fin del Juego",
+    "end_game_text": "El juego termina cuando un jugador alinea 3 piezas. El ganador es declarado por el color elegido. En caso de empate, los jugadores pueden reiniciar la partida o salir del juego."
+  },
+  "connect4_game": {
+    "title": "Conecta 4",
+    "objective": "Objetivo",
+    "objective_text": "El primer jugador que logre alinear cuatro piezas consecutivas (en horizontal, vertical o diagonal) gana la partida.",
+    "board": "Tablero",
+    "board_text": "El tablero es una cuadrícula vertical de 7 columnas por 6 filas. Las piezas se insertan desde la parte superior y caen a la posición más baja disponible.",
+    "pieces": "Piezas",
+    "pieces_text": "Cada jugador tiene un conjunto de piezas de color distinto.",
+    "rules": "Reglas",
+    "rule1": "Los jugadores se alternan con un movimiento por jugador, insertando una pieza en cualquier columna.",
+    "rule2": "Las piezas caen en la posición más baja disponible. El juego continúa hasta que un jugador alinee 4 piezas consecutivas o el tablero se llene, resultando en empate.",
+    "end_game": "Fin del Juego",
+    "end_game_text": "El juego termina cuando un jugador alinea 4 piezas. El ganador es declarado por el color. En caso de empate, los jugadores pueden reiniciar la partida o salir del juego."
+  },
+  "project_opening": {
+    "title": "Proyecto: Desarrollo de HEIL Games 4 para la Web",
+    "sponsor": "Patrocinador",
+    "project_manager": "Gerente de Proyecto",
+    "self_managed_team": "Equipo Autogestionado",
+    "date": "Fecha",
+    "overview": "Visión General del Proyecto",
+    "overview_text": "El objetivo de este proyecto es desarrollar una versión en línea del clásico juego Conecta 4, permitiendo que los jugadores compitan en un entorno digital.",
+    "objectives": "Objetivos del Proyecto",
+    "objective1": "Desarrollar una versión en línea de Conecta 4 para navegadores web.",
+    "objective2": "Permitir que los jugadores humanos compitan en tiempo real.",
+    "objective3": "Garantizar una interfaz intuitiva y receptiva para una experiencia de juego agradable.",
+    "scope": "Alcance del Proyecto",
+    "scope_text": "El alcance del proyecto incluye el desarrollo del front-end y back-end necesarios para el funcionamiento del juego.",
+    "budget": "Presupuesto Estimado",
+    "budget_text": "El presupuesto estimado para el proyecto es de R$ 100.000.",
+    "schedule": "Cronograma Estimado",
+    "schedule_text": "El proyecto debe durar 8 horas, con las siguientes fases principales:",
+    "phase1": "Fase de Planificación: 1 hora",
+    "phase2": "Fase de Desarrollo: 3 horas",
+    "phase3": "Fase de Pruebas: 1 hora",
+    "phase4": "Fase de Implementación: 1 hora",
+    "phase5": "Presentación Final: 5 minutos",
+    "approval": "Aprobación de Inicio del Proyecto",
+    "approval_text": "Al firmar a continuación, el Patrocinador aprueba formalmente el inicio del proyecto según lo descrito en este documento."
+  },
+  "LIGUE4_REQUIREMENTS": {
+    "TITLE": "Especificación de Requisitos Conecta 4",
+    "FUNCTIONAL": "REQUISITOS FUNCIONALES",
+    "RF_001": {
+      "TITLE": "RF-001: Presentación del Tablero de Juego",
+      "DESCRIPTION": "El sistema debe presentar a los jugadores el tablero, que debe tener 7 columnas con 6 filas."
+    },
+    "RF_002": {
+      "TITLE": "RF-002: Cantidad de Jugadores",
+      "DESCRIPTION": "Cada partida deberá tener exactamente 2 jugadores."
+    },
+    "RF_003": {
+      "TITLE": "RF-003: Diferenciación entre los Jugadores",
+      "DESCRIPTION": "Cada jugador tendrá un color específico para sus piezas dentro del juego."
+    },
+    "RF_004": {
+      "TITLE": "RF-004: Control de Piezas",
+      "DESCRIPTION": "Cada jugador juega con 21 piezas y solo tendrá el control de las piezas que correspondan al color que haya elegido."
+    },
+    "RF_005": {
+      "TITLE": "RF-005: Posicionamiento de las Piezas",
+      "DESCRIPTION": "La victoria en la partida se logra alineando 4 piezas, ya sea en posiciones horizontales, verticales o diagonales."
+    },
+    "RF_006": {
+      "TITLE": "RF-006: Identificador de Victoria",
+      "DESCRIPTION": "Después de que un jugador logre alinear 4 piezas, el sistema identifica y nombra al ganador según el color de las piezas."
+    },
+    "RF_007": {
+      "TITLE": "RF-007: Fin del Juego",
+      "DESCRIPTION": "Al nombrar al ganador, el sistema debe interrumpir el juego y solicitar a los jugadores una caja de confirmación para reiniciar otra partida."
+    },
+    "RF_008": {
+      "TITLE": "RF-008: Inicio y Reinicio del Juego",
+      "DESCRIPTION": "El sistema debe sortear al jugador que iniciará o reiniciará el juego."
+    },
+    "RF_009": {
+      "TITLE": "RF-009: 5 opciones de colores/figuras",
+      "DESCRIPTION": "El sistema debe ofrecer una selección de 5 colores/figuras para que el jugador elija para sus piezas."
+    },
+    "RF_010": {
+      "TITLE": "RF-010: Opción de 3 idiomas",
+      "DESCRIPTION": "El sistema debe ofrecer al jugador la opción de seleccionar hasta 3 idiomas."
+    },
+    "RF_011": {
+      "TITLE": "RF-011: Interacción Jugador contra Computadora",
+      "DESCRIPTION": "El sistema debe ofrecer la opción de que el jugador también pueda jugar contra la máquina."
+    }
+  },
+  "REQUIREMENTS_NON_FUNCTIONAL": {
+    "TITLE": "REQUISITOS NO FUNCIONALES",
+    "NF_001": {
+      "TITLE": "NF-001: Interfaz de Usuario",
+      "DESCRIPTION": "La interfaz debe ser intuitiva y fácil de usar, con instrucciones claras para nuevos jugadores sobre las reglas y el funcionamiento del juego."
+    },
+    "NF_002": {
+      "TITLE": "NF-002: Retroalimentación Visual",
+      "DESCRIPTION": "El sistema debe proporcionar una retroalimentación accesible y eficaz para las acciones y notificaciones sobre las jugadas, el estado del juego, victorias o empates."
+    },
+    "NF_003": {
+      "TITLE": "NF-003: Tiempo de Respuesta",
+      "DESCRIPTION": "El sistema debe garantizar que las acciones de los jugadores se procesen y reflejen en la pantalla en menos de 2 segundos.",
+      "RESPONSE": "el tiempo de respuesta está directamente relacionado con la rapidez con que se muestra el tablero al jugador."
+    },
+    "NF_004": {
+      "TITLE": "NF-004: Accesibilidad",
+      "DESCRIPTION": "El sistema debe permitir la interacción mediante el uso del ratón."
+    },
+    "NF_005": {
+      "TITLE": "NF-005: Identificación y Anuncio de la Victoria",
+      "DESCRIPTION": "El sistema debe anunciar la victoria de manera visual, proporcionando información clara sobre el ganador."
+    }
+  },
+  "REQUIREMENTS": {
+    "TITLE": "ESPECIFICACIÓN DE REQUISITOS",
+    "RF_011": {
+      "TITLE": "RF-011: Jugador vs Computadora",
+      "DESCRIPTION": "El sistema debe ofrecer la opción de jugar contra un oponente controlado por computadora, con dificultad ajustable."
+    },
+    "RF_012": {
+      "TITLE": "RF-012: Modos de Juego",
+      "DESCRIPTION": "El sistema debe tener dos modos de juego: Jugador contra Jugador y Jugador contra CPU."
+    },
+    "NF_005": {
+      "TITLE": "NF-005: Identificación y Anuncio de la Victoria",
+      "DESCRIPTION": "El sistema debe anunciar la victoria de manera visual, proporcionando información clara sobre el ganador."
+    }
+  },
+  "VELHA_REQUIREMENTS": {
+    "TITLE": "Especificación de Requisitos Tres en Raya",
+    "FUNCTIONAL": "REQUISITOS FUNCIONALES",
+    "RF_001": {
+      "TITLE": "RF-001: Presentación del Tablero de Juego",
+      "DESCRIPTION": "El sistema debe presentar a los jugadores el tablero, que debe tener 3 columnas con 3 filas."
+    },
+    "RF_002": {
+      "TITLE": "RF-002: Cantidad de Jugadores",
+      "DESCRIPTION": "Cada partida deberá tener exactamente 2 jugadores."
+    },
+    "RF_003": {
+      "TITLE": "RF-003: Diferenciación entre los Jugadores",
+      "DESCRIPTION": "Cada jugador tendrá un color específico para sus piezas dentro del juego."
+    },
+    "RF_004": {
+      "TITLE": "RF-004: Control de Piezas",
+      "DESCRIPTION": "Cada jugador juega con 21 piezas y solo tendrá el control de las piezas pertenecientes al color que elija."
+    },
+    "RF_005": {
+      "TITLE": "RF-005: Posicionamiento de las Piezas",
+      "DESCRIPTION": "La victoria en la partida se consigue al alinear 3 piezas, pudiendo ser en posiciones horizontales, verticales o diagonales."
+    },
+    "RF_006": {
+      "TITLE": "RF-006: Identificador de Victoria",
+      "DESCRIPTION": "Después de que un jugador consiga alinear 4 piezas, el sistema identifica y nombra al ganador por el color de las piezas."
+    },
+    "RF_007": {
+      "TITLE": "RF-007: Fin del Juego",
+      "DESCRIPTION": "Al nombrar al ganador, el sistema debe interrumpir el juego y solicitar a los jugadores una caja de confirmación para reiniciar otra partida."
+    },
+    "RF_008": {
+      "TITLE": "RF-008: Inicio y Reinicio del Juego",
+      "DESCRIPTION": "El sistema debe sortear al jugador que iniciará o reiniciará el juego."
+    },
+    "RF_009": {
+      "TITLE": "RF-009: 5 opciones de colores/figuras",
+      "DESCRIPTION": "El sistema debe ofrecer una selección de 5 colores/figuras para que el jugador elija sus piezas."
+    },
+    "RF_010": {
+      "TITLE": "RF-010: Opción de 3 idiomas",
+      "DESCRIPTION": "El sistema debe ofrecer al jugador la opción de seleccionar hasta 3 idiomas."
+    },
+    "RF_011": {
+      "TITLE": "RF-011: Interacción Jugador vs Computadora",
+      "DESCRIPTION": "El sistema debe tener la opción de que el jugador también pueda jugar contra la máquina."
+    }
+  },
+  "NF_SECTION": {
+    "TITLE": "REQUISITOS NO FUNCIONALES"
+  }
 }
