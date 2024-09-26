@@ -44,6 +44,7 @@
     "end_game_text": "The game ends when a player aligns 4 pieces, declaring them the winner by their chosen color. In case of a tie, players may restart the game or exit."
   },
   "project_opening": {
+    "menu": "Opening Term",
     "title": "Project: HEIL Games 4 Development for Web",
     "sponsor": "Sponsor",
     "project_manager": "Project Manager",
@@ -70,6 +71,7 @@
     "approval_text": "By signing below, the Sponsor formally approves the start of the project as described in this document."
   },
   "LIGUE4_REQUIREMENTS": {
+    "menu": "Connect 4 Requirements",
     "TITLE": "Connect 4 Requirements Specification",
     "FUNCTIONAL": "FUNCTIONAL REQUIREMENTS",
     "RF_001": {
@@ -163,6 +165,7 @@
     }
   },
   "VELHA_REQUIREMENTS": {
+    "menu": "Tic-Tac-Toe Requirements",
     "TITLE": "Tic-Tac-Toe Requirements Specification",
     "FUNCTIONAL": "FUNCTIONAL REQUIREMENTS",
     "RF_001": {

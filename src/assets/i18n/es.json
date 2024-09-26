@@ -44,6 +44,7 @@
     "end_game_text": "El juego termina cuando un jugador alinea 4 piezas. El ganador es declarado por el color. En caso de empate, los jugadores pueden reiniciar la partida o salir del juego."
   },
   "project_opening": {
+    "menu": "Término de Apertura",
     "title": "Proyecto: Desarrollo de HEIL Games 4 para la Web",
     "sponsor": "Patrocinador",
     "project_manager": "Gerente de Proyecto",
@@ -70,6 +71,7 @@
     "approval_text": "Al firmar a continuación, el Patrocinador aprueba formalmente el inicio del proyecto según lo descrito en este documento."
   },
   "LIGUE4_REQUIREMENTS": {
+    "menu": "Requisitos Conecta 4",
     "TITLE": "Especificación de Requisitos Conecta 4",
     "FUNCTIONAL": "REQUISITOS FUNCIONALES",
     "RF_001": {
@@ -157,6 +159,7 @@
     }
   },
   "VELHA_REQUIREMENTS": {
+    "menu": "Requisitos Tres en Raya",
     "TITLE": "Especificación de Requisitos Tres en Raya",
     "FUNCTIONAL": "REQUISITOS FUNCIONALES",
     "RF_001": {

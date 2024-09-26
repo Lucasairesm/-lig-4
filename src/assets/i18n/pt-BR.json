@@ -44,6 +44,7 @@
     "end_game_text": "O jogo acaba após um dos jogadores conseguir alinhar as 4 peças. O vencedor é declarado pela cor. Em caso de empate, os jogadores podem reiniciar a partida ou sair do jogo."
   },
   "project_opening": {
+    "menu": "Termo de Abertura",
     "title": "Projeto: Desenvolvimento do HEIL Games 4 para Web",
     "sponsor": "Patrocinador",
     "project_manager": "Gerente de Projeto",
@@ -70,6 +71,7 @@
     "approval_text": "Ao assinar abaixo, o Patrocinador aprova formalmente o início do projeto conforme descrito neste documento."
   },
   "LIGUE4_REQUIREMENTS": {
+    "menu": "Requisitos Ligue 4",
     "TITLE": "Especificação de Requisitos Ligue 4",
     "FUNCTIONAL": "REQUISITOS FUNCIONAIS",
     "RF_001": {
@@ -163,6 +165,7 @@
     }
   },
   "VELHA_REQUIREMENTS": {
+    "menu": "Requisitos Jogo da Velha",
     "TITLE": "Especificação de Requisitos Jogo da Velha",
     "FUNCTIONAL": "REQUISITOS FUNCIONAIS",
     "RF_001": {
